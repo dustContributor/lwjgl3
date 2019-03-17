@@ -621,10 +621,10 @@
                 <pathelement path="${module.classpath}"/>
                 <pathelement path="${bin.test}"/>
                 <pathelement path="${lib}/java/jsr305.jar"/>
-                <pathelement path="${lib}/java/testng.jar"/>
-                <pathelement path="${lib}/java/joml.jar"/>
                 <pathelement path="${lib}/java/jmh-core.jar"/>
                 <pathelement path="${lib}/java/jmh-generator-annprocess.jar"/>
+                <pathelement path="${lib}/java/joml.jar"/>
+                <pathelement path="${lib}/java/testng.jar"/>
             </classpath>
 
             <!-- Demos -->
@@ -845,7 +845,7 @@
             <srcfile/>
 
             <arg value="s3://build.lwjgl.org/${build.type}/${platform.remote}/${build.arch}/"/>
-            <arg line='--acl public-read --storage-class REDUCED_REDUNDANCY --cache-control "public, must-revalidate, proxy-revalidate, max-age=0"'/>
+            <arg line='--acl public-read --cache-control "public, must-revalidate, proxy-revalidate, max-age=0"'/>
 
             <fileset dir=".">
                 <include name="${lib}/${libraries}"/>
@@ -856,27 +856,29 @@
 
     <macrodef name="get-release-offline">
         <attribute name="url"/>
+        <attribute name="dest"/>
 
         <sequential>
             <local name="base"/>
             <basename file="@{url}" property="base"/>
 
             <local name="available"/>
-            <available file="${lib}/${base}" property="available"/>
+            <available file="${lib}@{dest}/${base}" property="available"/>
 
             <echo message="release: ${lib}${file.separator}${base} is missing" level="warning" unless:set="available"/>
             <quiet if:set="available">
-                <copy file="${lib}/${base}" todir="${release}/${module}/native"/>
+                <copy file="${lib}@{dest}/${base}" todir="${release}/${module}/native@{dest}"/>
             </quiet>
         </sequential>
     </macrodef>
 
     <macrodef name="get-release">
         <attribute name="url"/>
+        <attribute name="dest" default=""/>
 
         <sequential>
-            <get src="https://build.lwjgl.org/${build.type}/@{url}" dest="${release}/${module}/native" verbose="false" usetimestamp="true" unless:true="${build.offline}"/>
-            <get-release-offline url="@{url}" if:true="${build.offline}"/>
+            <get src="https://build.lwjgl.org/${build.type}/@{url}" dest="${release}/${module}/native@{dest}" verbose="false" usetimestamp="true" unless:true="${build.offline}"/>
+            <get-release-offline url="@{url}" dest="@{dest}" if:true="${build.offline}"/>
         </sequential>
     </macrodef>
 
@@ -917,6 +919,7 @@
             <lwjgl-jar destfile="${release}/${module}/${module}-natives-@{platform}.jar" title="@{title}" unless:set="platform.skip">
                 <fileset dir="${release}/${module}/native" includes="*@{extension}*"/>
                 <fileset dir="${bin.lwjgl}/@{name}.natives" includes="META-INF/versions/9/module-info.class" if:set="jdk9"/>
+                <content/>
             </lwjgl-jar>
         </sequential>
     </macrodef>
@@ -925,7 +928,10 @@
         <attribute name="name"/>
         <attribute name="title"/>
         <attribute name="native-library"/>
-        <element name="content" optional="true" implicit="true"/>
+        <element name="content" optional="true"/>
+        <element name="linux-content" optional="true"/>
+        <element name="macos-content" optional="true"/>
+        <element name="windows-content" optional="true"/>
         <sequential>
             <quiet>
                 <mkdir dir="${release}/${module}/native"/>
@@ -982,9 +988,15 @@
             </checksum>
 
             <parallel threadsPerProcessor="1" failonany="true">
-                <natives-jar name="@{name}" title="@{title}" platform="linux" extension=".so"/>
-                <natives-jar name="@{name}" title="@{title}" platform="macos" extension=".dylib"/>
-                <natives-jar name="@{name}" title="@{title}" platform="windows" extension=".dll"/>
+                <natives-jar name="@{name}" title="@{title}" platform="linux" extension=".so">
+                    <linux-content/>
+                </natives-jar>
+                <natives-jar name="@{name}" title="@{title}" platform="macos" extension=".dylib">
+                    <macos-content/>
+                </natives-jar>
+                <natives-jar name="@{name}" title="@{title}" platform="windows" extension=".dll">
+                    <windows-content/>
+                </natives-jar>
             </parallel>
         </sequential>
     </macrodef>
@@ -994,8 +1006,10 @@
         <attribute name="name"/>
         <attribute name="title"/>
         <attribute name="native-library" default=""/>
-        <attribute name="license" default="@{name}"/>
         <element name="natives" optional="true"/>
+        <element name="linux" optional="true"/>
+        <element name="macos" optional="true"/>
+        <element name="windows" optional="true"/>
         <sequential>
             <local name="module"/>
             <condition property="module" value="lwjgl" else="lwjgl-@{name}">
@@ -1009,7 +1023,10 @@
 
             <!-- Bundle natives -->
             <release-natives name="@{name}" title="@{title}" native-library="@{native-library}" unless:set="java-only.binding.@{name}">
-                <natives/>
+                <content><natives/></content>
+                <linux-content><linux/></linux-content>
+                <macos-content><macos/></macos-content>
+                <windows-content><windows/></windows-content>
             </release-natives>
 
             <!-- Bundle classes -->
@@ -1090,7 +1107,7 @@
             <!-- Copy license -->
             <quiet>
                 <copy todir="${release}/${module}">
-                    <fileset dir="${module.lwjgl}/@{name}" includes="@{license}*"/>
+                    <fileset dir="${module.lwjgl}/@{name}" includes="*_license.txt"/>
                 </copy>
             </quiet>
         </sequential>
@@ -1163,7 +1180,7 @@
                 <fileset dir="${module.lwjgl}/core/src/main/java10" includes="**"/>
             </copy>
         </quiet>
-        <release-module package="org.lwjgl" name="core" native-library="lwjgl" license="dyncall" title="Core"/>
+        <release-module package="org.lwjgl" name="core" native-library="lwjgl" title="Core"/>
 
         <!-- Assimp -->
         <release-module package="org.lwjgl.assimp" name="assimp" native-library="assimp" title="assimp" if:true="${binding.assimp}"/>
@@ -1178,7 +1195,7 @@
         <release-module package="org.lwjgl.cuda" name="cuda" title="CUDA" if:true="${binding.cuda}"/>
 
         <!-- EGL -->
-        <release-module package="org.lwjgl.egl" name="egl" title="EGL" license="khronos" if:true="${binding.egl}"/>
+        <release-module package="org.lwjgl.egl" name="egl" title="EGL" if:true="${binding.egl}"/>
 
         <!-- GLFW -->
         <release-module package="org.lwjgl.glfw" name="glfw" title="GLFW" if:true="${binding.glfw}">
@@ -1219,7 +1236,7 @@
         <release-module package="org.lwjgl.util.meow" name="meow" native-library="lwjgl_meow" title="Meow hash" if:true="${binding.meow}"/>
 
         <!-- NanoVG -->
-        <release-module package="org.lwjgl.nanovg" name="nanovg" native-library="lwjgl_nanovg" title="NanoVG" license="*_license.txt" if:true="${binding.nanovg}"/>
+        <release-module package="org.lwjgl.nanovg" name="nanovg" native-library="lwjgl_nanovg" title="NanoVG" if:true="${binding.nanovg}"/>
 
         <!-- Newton -->
         <release-module package="org.lwjgl.newton" name="newton" native-library="lwjgl_newton" title="Newton Dynamics" if:true="${binding.newton}"/>
@@ -1249,13 +1266,13 @@
         </release-module>
 
         <!-- OpenCL -->
-        <release-module package="org.lwjgl.opencl" name="opencl" title="OpenCL" license="khronos" if:true="${binding.opencl}"/>
+        <release-module package="org.lwjgl.opencl" name="opencl" title="OpenCL" if:true="${binding.opencl}"/>
 
         <!-- OpenGL -->
-        <release-module package="org.lwjgl.opengl" name="opengl" native-library="lwjgl_opengl" title="OpenGL" license="khronos" if:true="${binding.opengl}"/>
+        <release-module package="org.lwjgl.opengl" name="opengl" native-library="lwjgl_opengl" title="OpenGL" if:true="${binding.opengl}"/>
 
         <!-- OpenGL ES -->
-        <release-module package="org.lwjgl.opengles" name="opengles" native-library="lwjgl_opengles" title="OpenGL ES" license="khronos" if:true="${binding.opengles}"/>
+        <release-module package="org.lwjgl.opengles" name="opengles" native-library="lwjgl_opengles" title="OpenGL ES" if:true="${binding.opengles}"/>
 
         <!-- OpenVR -->
         <release-module package="org.lwjgl.openvr" name="openvr" title="OpenVR" if:true="${binding.openvr}">
@@ -1316,7 +1333,7 @@
         <release-module package="org.lwjgl.util.vma" name="vma" native-library="lwjgl_vma" title="vma" if:true="${binding.vma}"/>
 
         <!-- Vulkan -->
-        <release-module package="org.lwjgl.vulkan" name="vulkan" title="Vulkan" license="khronos" if:true="${binding.vulkan}">
+        <release-module package="org.lwjgl.vulkan" name="vulkan" title="Vulkan" if:true="${binding.vulkan}">
             <natives>
                 <get-release url="macosx/x64/libMoltenVK.dylib"/>
                 <get-release url="macosx/x64/libMoltenVK.dylib.git"/>
