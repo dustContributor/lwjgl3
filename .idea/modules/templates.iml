@@ -23,6 +23,7 @@
     <orderEntry type="module" module-name="templates.lz4" />
     <orderEntry type="module" module-name="templates.meow" />
     <orderEntry type="module" module-name="templates.nanovg" />
+    <orderEntry type="module" module-name="templates.newton" />
     <orderEntry type="module" module-name="templates.nfd" />
     <orderEntry type="module" module-name="templates.nuklear" />
     <orderEntry type="module" module-name="templates.odbc" />
