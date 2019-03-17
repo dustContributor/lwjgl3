@@ -347,6 +347,19 @@ enum class Module(
         """,
         library = JNILibrary.create("LibNanoVG", setupAllocator = true)
     ),
+    NEWTON(
+        "newton",
+        "org.lwjgl.newton",
+        """
+        Contains bindings to the ${url("https://github.com/MADEAPPS/newton-dynamics", "Newton Dynamics")} library
+
+		<h3>UNSTABLE API</h3>
+
+        Until these bindings are sufficiently tested, this API should be considered unstable.
+        """,
+        library = JNILibrary.create("LibNewton"),
+        arrayOverloads = false
+    ),
     NFD(
         "nfd",
         "org.lwjgl.util.nfd",
