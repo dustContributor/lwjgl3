@@ -141,6 +141,11 @@ enum Artifacts {
         "A tiny, neat C library that portably invokes native file open and save dialogs.",
         Platforms.ALL
     ),
+    NEWTON(
+        "lwjgl-newton", "LWJGL - Newton Dynamics bindings",
+        "A cross-platform life-like physics simulation library.",
+        Platforms.ALL
+    ),
     NUKLEAR(
         "lwjgl-nuklear", "LWJGL - Nuklear bindings",
         "A minimal state immediate mode graphical user interface toolkit.",

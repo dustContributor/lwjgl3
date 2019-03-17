@@ -248,6 +248,30 @@
             </link>
         </build>
 
+        <!-- Newton Dynamics -->
+        <build module="newton" simple="true" linker="clang++" if:true="${binding.newton}">
+            <beforeLink>
+                <mkdir dir="${lib}/${platform}/${build.arch}/newton"/>
+                <parallel threadsPerProcessor="2" failonany="true" unless:set="lib-uptodate">
+                    <update-dependency name="Newton libnewton"         artifact="${build.arch}/newton/libnewton.a"/>
+                    <update-dependency name="Newton libdAnimation"     artifact="${build.arch}/newton/libdAnimation.a"/>
+                    <update-dependency name="Newton libdContainers"    artifact="${build.arch}/newton/libdContainers.a"/>
+                    <update-dependency name="Newton libdCustomJoints"  artifact="${build.arch}/newton/libdCustomJoints.a"/>
+                    <update-dependency name="Newton libdMath"          artifact="${build.arch}/newton/libdMath.a"/>
+                    <update-dependency name="Newton libdNewton"        artifact="${build.arch}/newton/libdNewton.a"/>
+                    <update-dependency name="Newton libdScene"         artifact="${build.arch}/newton/libdScene.a"/>
+                    <update-dependency name="Newton libdVehicle"       artifact="${build.arch}/newton/libdVehicle.a"/>
+                    <update-dependency name="Newton libdgCore"         artifact="${build.arch}/newton/libdgCore.a"/>
+                    <update-dependency name="Newton libdgPhysics"      artifact="${build.arch}/newton/libdgPhysics.a"/>
+                </parallel>
+            </beforeLink>
+            <link>
+                <fileset dir="${lib}/${platform}/${build.arch}/newton">
+                    <include name="*.a"/>
+                </fileset>
+            </link>
+        </build>
+        
         <!-- Nuklear -->
         <build_simple module="nuklear"/>
 

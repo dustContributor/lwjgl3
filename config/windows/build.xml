@@ -258,6 +258,31 @@ EXPORTS
             </linkargs>
         </build>
 
+        <!-- Newton Dynamics -->
+        <build module="newton" simple="true" if:true="${binding.newton}">
+            <beforeLink>
+                <mkdir dir="${lib}/${platform}/${build.arch}/newton"/>
+                <parallel threadsPerProcessor="2" failonany="true" unless:set="lib-uptodate">
+                    <update-dependency name="Newton newton"         artifact="${build.arch}/newton/newton.lib"/>
+                    <update-dependency name="Newton dAnimation"     artifact="${build.arch}/newton/dAnimation.lib"/>
+                    <update-dependency name="Newton dContainers"    artifact="${build.arch}/newton/dContainers.lib"/>
+                    <update-dependency name="Newton dCustomJoints"  artifact="${build.arch}/newton/dCustomJoints.lib"/>
+                    <update-dependency name="Newton dMath"          artifact="${build.arch}/newton/dMath.lib"/>
+                    <update-dependency name="Newton dNewton"        artifact="${build.arch}/newton/dNewton.lib"/>
+                    <update-dependency name="Newton dScene"         artifact="${build.arch}/newton/dScene.lib"/>
+                    <update-dependency name="Newton dVehicle"       artifact="${build.arch}/newton/dVehicle.lib"/>
+                    <update-dependency name="Newton dgCore"         artifact="${build.arch}/newton/dgCore.lib"/>
+                    <update-dependency name="Newton dgPhysics"      artifact="${build.arch}/newton/dgPhysics.lib"/>
+                    <update-dependency name="Newton dgNewtonAvx"    artifact="${build.arch}/newton/dgNewtonAvx.lib"/>
+                </parallel>
+            </beforeLink>
+             <link>
+                <fileset dir="${lib}/${platform}/${build.arch}/newton">
+                    <include name="*.lib"/>
+                </fileset>
+            </link>
+        </build>
+
         <!-- Nuklear -->
         <build_simple module="nuklear"/>
 

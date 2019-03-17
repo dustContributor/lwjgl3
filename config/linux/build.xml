@@ -282,8 +282,41 @@
             </link>
         </build>
 
+        <!-- Newton Dynamics -->
+        <build module="newton" simple="true" linker="g++" if:true="${binding.newton}">
+            <beforeLink>
+                <mkdir dir="${lib}/${platform}/${build.arch}/newton"/>
+                <parallel threadsPerProcessor="2" failonany="true" unless:set="lib-uptodate">
+                    <update-dependency name="Newton libnewton"         artifact="${build.arch}/newton/libnewton.a"/>
+                    <update-dependency name="Newton libdAnimation"     artifact="${build.arch}/newton/libdAnimation.a"/>
+                    <update-dependency name="Newton libdContainers"    artifact="${build.arch}/newton/libdContainers.a"/>
+                    <update-dependency name="Newton libdCustomJoints"  artifact="${build.arch}/newton/libdCustomJoints.a"/>
+                    <update-dependency name="Newton libdMath"          artifact="${build.arch}/newton/libdMath.a"/>
+                    <update-dependency name="Newton libdNewton"        artifact="${build.arch}/newton/libdNewton.a"/>
+                    <update-dependency name="Newton libdScene"         artifact="${build.arch}/newton/libdScene.a"/>
+                    <update-dependency name="Newton libdVehicle"       artifact="${build.arch}/newton/libdVehicle.a"/>
+                    <update-dependency name="Newton libdgCore"         artifact="${build.arch}/newton/libdgCore.a"/>
+                    <update-dependency name="Newton libdgPhysics"      artifact="${build.arch}/newton/libdgPhysics.a"/>
+                </parallel>
+            </beforeLink>
+            <link>
+                <arg value="-L${lib}/${platform}/${build.arch}/newton"/>
+                <!-- Order is important -->
+                <arg value="-lnewton"/>
+                <arg value="-ldAnimation"/>
+                <arg value="-ldContainers"/>
+                <arg value="-ldCustomJoints"/>
+                <arg value="-ldMath"/>
+                <arg value="-ldNewton"/>
+                <arg value="-ldScene"/>
+                <arg value="-ldVehicle"/>
+                <arg value="-ldgCore"/>
+                <arg value="-ldgPhysics"/>
+            </link>
+        </build>
+
         <!-- Nuklear -->
-        <build simple="true" module="nuklear">
+        <build simple="true" module="nuklear" if:true="${binding.nuklear}">
             <link>
                 <arg value="-lm"/>
             </link>
@@ -299,7 +332,7 @@
         <build_simple module="openvr"/>
 
         <!-- ParShapes -->
-        <build simple="true" module="par">
+        <build simple="true" module="par" if:true="${binding.par}">
             <link>
                 <arg value="-lm"/>
             </link>
