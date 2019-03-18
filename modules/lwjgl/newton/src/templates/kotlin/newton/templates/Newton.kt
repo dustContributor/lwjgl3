@@ -249,30 +249,30 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //
 //        NewtonWorld.const.p.const("newtonWorld", "")
 //    )
-//
-//    void(
-//        "Update",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        float("timestep", "")
-//    )
-//
-//    void(
-//        "UpdateAsync",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        float("timestep", "")
-//    )
-//
-//    void(
-//        "WaitForUpdateToFinish",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", "")
-//    )
-//
+
+    void(
+        "Update",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        float("timestep", "")
+    )
+
+    void(
+        "UpdateAsync",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        float("timestep", "")
+    )
+
+    void(
+        "WaitForUpdateToFinish",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", "")
+    )
+
 //    int(
 //        "GetNumberOfSubsteps",
 //        "",
@@ -1022,16 +1022,16 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //
 //        NewtonWorld.const.p.const("newtonWorld", "")
 //    )
-//
-//    NewtonCollision.p(
-//        "CreateSphere",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        float("radius", ""),
-//        int("shapeID", ""),
-//        float.const.p.const("offsetMatrix", "")
-//    )
+
+    NewtonCollision.p(
+        "CreateSphere",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        float("radius", ""),
+        int("shapeID", ""),
+        Check(16)..float.const.p.const("offsetMatrix", "")   // TODO Nullable
+    )
 
     NewtonCollision.p(
         "CreateBox",
@@ -2479,31 +2479,31 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //
 //        NewtonBody.const.p.const("body", "")
 //    )
-//
-//    void(
-//        "BodyGetPosition",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        float.p.const("pos", "")
-//    )
-//
-//    void(
-//        "BodyGetMatrix",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        float.p.const("matrix", "")
-//    )
-//
-//    void(
-//        "BodyGetRotation",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        float.p.const("rotation", "")
-//    )
-//
+
+    void(
+        "BodyGetPosition",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        Check(3)..float.p.const("pos", "")
+    )
+
+    void(
+        "BodyGetMatrix",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        Check(16)..float.p.const("matrix", "")
+    )
+
+    void(
+        "BodyGetRotation",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        Check(4)..float.p.const("rotation", "")
+    )
+
 //    void(
 //        "BodyGetMass",
 //        "",
