@@ -190,65 +190,65 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //        NewtonWorld.const.p.const("newtonWorld", ""),
 //        float("tolerance", "")
 //    )
-//
-//    void(
-//        "InvalidateCache",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", "")
-//    )
-//
-//    void(
-//        "SetSolverIterations",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        int("model", "")
-//    )
-//
-//    int(
-//        "GetSolverIterations",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", "")
-//    )
-//
-//    void(
-//        "SetParallelSolverOnLargeIsland",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        int("mode", "")
-//    )
-//
-//    int(
-//        "GetParallelSolverOnLargeIsland",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", "")
-//    )
-//
-//    int(
-//        "GetBroadphaseAlgorithm",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", "")
-//    )
-//
-//    void(
-//        "SelectBroadphaseAlgorithm",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        int("algorithmType", "")
-//    )
-//
-//    void(
-//        "ResetBroadphase",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", "")
-//    )
+
+    void(
+        "InvalidateCache",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", "")
+    )
+
+    void(
+        "SetSolverIterations",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        int("model", "")
+    )
+
+    int(
+        "GetSolverIterations",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", "")
+    )
+
+    void(
+        "SetParallelSolverOnLargeIsland",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        int("mode", "")
+    )
+
+    int(
+        "GetParallelSolverOnLargeIsland",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", "")
+    )
+
+    int(
+        "GetBroadphaseAlgorithm",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", "")
+    )
+
+    void(
+        "SelectBroadphaseAlgorithm",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        int("algorithmType", "")
+    )
+
+    void(
+        "ResetBroadphase",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", "")
+    )
 
     void(
         "Update",
@@ -273,28 +273,28 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
         NewtonWorld.const.p.const("newtonWorld", "")
     )
 
-//    int(
-//        "GetNumberOfSubsteps",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", "")
-//    )
-//
-//    void(
-//        "SetNumberOfSubsteps",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        int("subSteps", "")
-//    )
-//
-//    float(
-//        "GetLastUpdateTime",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", "")
-//    )
-//
+    int(
+        "GetNumberOfSubsteps",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", "")
+    )
+
+    void(
+        "SetNumberOfSubsteps",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        int("subSteps", "")
+    )
+
+    float(
+        "GetLastUpdateTime",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", "")
+    )
+
 //    void(
 //        "SerializeToFile",
 //        "",
@@ -362,44 +362,44 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //        NewtonOnJointSerializationCallback.p.const("serializeJoint", ""),
 //        NewtonOnJointDeserializationCallback.p.const("deserializeJoint", "")
 //    )
-//
-//    void(
-//        "WorldCriticalSectionLock",
-//        "multi threading interface",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        int("threadIndex", "")
-//    )
-//
-//    void(
-//        "WorldCriticalSectionUnlock",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", "")
-//    )
-//
-//    void(
-//        "SetThreadsCount",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        int("threads", "")
-//    )
-//
-//    int(
-//        "GetThreadsCount",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", "")
-//    )
-//
-//    int(
-//        "GetMaxThreadsCount",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", "")
-//    )
-//
+
+    void(
+        "WorldCriticalSectionLock",
+        "multi threading interface",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        int("threadIndex", "")
+    )
+
+    void(
+        "WorldCriticalSectionUnlock",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", "")
+    )
+
+    void(
+        "SetThreadsCount",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        int("threads", "")
+    )
+
+    int(
+        "GetThreadsCount",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", "")
+    )
+
+    int(
+        "GetMaxThreadsCount",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", "")
+    )
+
 //    void(
 //        "DispachThreadJob",
 //        "",
@@ -409,14 +409,14 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //        void.p.const("usedData", ""),
 //        char.const.p.const("functionName", "")
 //    )
-//
-//    void(
-//        "SyncThreadJobs",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", "")
-//    )
-//
+
+    void(
+        "SyncThreadJobs",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", "")
+    )
+
 //    int(
 //        "AtomicAdd",
 //        "atomic operations",
@@ -432,14 +432,14 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //        int.p.const("ptr", ""),
 //        int("value", "")
 //    )
-//
-//    void(
-//        "Yield",
-//        "",
-//
-//        void()
-//    )
-//
+
+    void(
+        "Yield",
+        "",
+
+        void()
+    )
+
 //    void(
 //        "SetIslandUpdateEvent",
 //        "",
@@ -636,20 +636,20 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //        int("threadIndex", "")
 //    )
 //
-//    int(
-//        "WorldGetBodyCount",
-//        "world utility functions",
-//
-//        NewtonWorld.const.p.const("newtonWorld", "")
-//    )
-//
-//    int(
-//        "WorldGetConstraintCount",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", "")
-//    )
-//
+    int(
+        "WorldGetBodyCount",
+        "world utility functions",
+
+        NewtonWorld.const.p.const("newtonWorld", "")
+    )
+
+    int(
+        "WorldGetConstraintCount",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", "")
+    )
+
 //    NewtonBody.p(
 //        "IslandGetBody",
 //        "",
@@ -667,28 +667,28 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //        float.p.const("p0", ""),
 //        float.p.const("p1", "")
 //    )
-//
-//    int(
-//        "MaterialCreateGroupID",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", "")
-//    )
-//
-//    int(
-//        "MaterialGetDefaultGroupID",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", "")
-//    )
-//
-//    void(
-//        "MaterialDestroyAllGroupID",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", "")
-//    )
-//
+
+    int(
+        "MaterialCreateGroupID",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", "")
+    )
+
+    int(
+        "MaterialGetDefaultGroupID",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", "")
+    )
+
+    void(
+        "MaterialDestroyAllGroupID",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", "")
+    )
+
 //    void.p(
 //        "MaterialGetUserData",
 //        "",
@@ -697,17 +697,17 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //        int("id0", ""),
 //        int("id1", "")
 //    )
-//
-//    void(
-//        "MaterialSetSurfaceThickness",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        int("id0", ""),
-//        int("id1", ""),
-//        float("thickness", "")
-//    )
-//
+
+    void(
+        "MaterialSetSurfaceThickness",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        int("id0", ""),
+        int("id1", ""),
+        float("thickness", "")
+    )
+
 //    void(
 //        "MaterialSetCallbackUserData",
 //        "",
@@ -748,48 +748,48 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //        NewtonOnAABBOverlap("aabbOverlap", ""),
 //        NewtonContactsProcess("process", "")
 //    )
-//
-//    void(
-//        "MaterialSetDefaultSoftness",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        int("id0", ""),
-//        int("id1", ""),
-//        float("value", "")
-//    )
-//
-//    void(
-//        "MaterialSetDefaultElasticity",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        int("id0", ""),
-//        int("id1", ""),
-//        float("elasticCoef", "")
-//    )
-//
-//    void(
-//        "MaterialSetDefaultCollidable",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        int("id0", ""),
-//        int("id1", ""),
-//        int("state", "")
-//    )
-//
-//    void(
-//        "MaterialSetDefaultFriction",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        int("id0", ""),
-//        int("id1", ""),
-//        float("staticFriction", ""),
-//        float("kineticFriction", "")
-//    )
-//
+
+    void(
+        "MaterialSetDefaultSoftness",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        int("id0", ""),
+        int("id1", ""),
+        float("value", "")
+    )
+
+    void(
+        "MaterialSetDefaultElasticity",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        int("id0", ""),
+        int("id1", ""),
+        float("elasticCoef", "")
+    )
+
+    void(
+        "MaterialSetDefaultCollidable",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        int("id0", ""),
+        int("id1", ""),
+        int("state", "")
+    )
+
+    void(
+        "MaterialSetDefaultFriction",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        int("id0", ""),
+        int("id1", ""),
+        float("staticFriction", ""),
+        float("kineticFriction", "")
+    )
+
 //    NewtonMaterial.p(
 //        "WorldGetFirstMaterial",
 //        "",
@@ -1045,52 +1045,52 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
         Check(16)..float.const.p.const("offsetMatrix", "")
     )
 
-//    NewtonCollision.p(
-//        "CreateCone",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        float("radius", ""),
-//        float("height", ""),
-//        int("shapeID", ""),
-//        float.const.p.const("offsetMatrix", "")
-//    )
-//
-//    NewtonCollision.p(
-//        "CreateCapsule",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        float("radius0", ""),
-//        float("radius1", ""),
-//        float("height", ""),
-//        int("shapeID", ""),
-//        float.const.p.const("offsetMatrix", "")
-//    )
-//
-//    NewtonCollision.p(
-//        "CreateCylinder",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        float("radio0", ""),
-//        float("radio1", ""),
-//        float("height", ""),
-//        int("shapeID", ""),
-//        float.const.p.const("offsetMatrix", "")
-//    )
-//
-//    NewtonCollision.p(
-//        "CreateChamferCylinder",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        float("radius", ""),
-//        float("height", ""),
-//        int("shapeID", ""),
-//        float.const.p.const("offsetMatrix", "")
-//    )
-//
+    NewtonCollision.p(
+        "CreateCone",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        float("radius", ""),
+        float("height", ""),
+        int("shapeID", ""),
+        Check(16)..float.const.p.const("offsetMatrix", "")
+    )
+
+    NewtonCollision.p(
+        "CreateCapsule",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        float("radius0", ""),
+        float("radius1", ""),
+        float("height", ""),
+        int("shapeID", ""),
+        Check(16)..float.const.p.const("offsetMatrix", "")
+    )
+
+    NewtonCollision.p(
+        "CreateCylinder",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        float("radio0", ""),
+        float("radio1", ""),
+        float("height", ""),
+        int("shapeID", ""),
+        Check(16)..float.const.p.const("offsetMatrix", "")
+    )
+
+    NewtonCollision.p(
+        "CreateChamferCylinder",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        float("radius", ""),
+        float("height", ""),
+        int("shapeID", ""),
+        Check(16)..float.const.p.const("offsetMatrix", "")
+    )
+
 //    NewtonCollision.p(
 //        "CreateConvexHull",
 //        "",
@@ -1101,7 +1101,7 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //        int("strideInBytes", ""),
 //        float("tolerance", ""),
 //        int("shapeID", ""),
-//        float.const.p.const("offsetMatrix", "")
+//        Check(16)..float.const.p.const("offsetMatrix", "")
 //    )
 //
 //    NewtonCollision.p(
@@ -1113,22 +1113,22 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //        float("tolerance", ""),
 //        int("shapeID", "")
 //    )
-//
-//    int(
-//        "CollisionGetMode",
-//        "",
-//
-//        NewtonCollision.const.p.const("convexCollision", "")
-//    )
-//
-//    void(
-//        "CollisionSetMode",
-//        "",
-//
-//        NewtonCollision.const.p.const("convexCollision", ""),
-//        int("mode", "")
-//    )
-//
+
+    int(
+        "CollisionGetMode",
+        "",
+
+        NewtonCollision.const.p.const("convexCollision", "")
+    )
+
+    void(
+        "CollisionSetMode",
+        "",
+
+        NewtonCollision.const.p.const("convexCollision", ""),
+        int("mode", "")
+    )
+
 //    int(
 //        "ConvexHullGetFaceIndices",
 //        "",
@@ -1720,35 +1720,35 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //        NewtonCollision.const.p.const("staticCollision", ""),
 //        NewtonTreeCollisionCallback("userCallback", "")
 //    )
-//
-//    NewtonCollision.p(
-//        "CollisionCreateInstance",
-//        "",
-//
-//        NewtonCollision.const.p.const("collision", "")
-//    )
-//
-//    int(
-//        "CollisionGetType",
-//        "",
-//
-//        NewtonCollision.const.p.const("collision", "")
-//    )
-//
-//    int(
-//        "CollisionIsConvexShape",
-//        "",
-//
-//        NewtonCollision.const.p.const("collision", "")
-//    )
-//
-//    int(
-//        "CollisionIsStaticShape",
-//        "",
-//
-//        NewtonCollision.const.p.const("collision", "")
-//    )
-//
+
+    NewtonCollision.p(
+        "CollisionCreateInstance",
+        "",
+
+        NewtonCollision.const.p.const("collision", "")
+    )
+
+    int(
+        "CollisionGetType",
+        "",
+
+        NewtonCollision.const.p.const("collision", "")
+    )
+
+    int(
+        "CollisionIsConvexShape",
+        "",
+
+        NewtonCollision.const.p.const("collision", "")
+    )
+
+    int(
+        "CollisionIsStaticShape",
+        "",
+
+        NewtonCollision.const.p.const("collision", "")
+    )
+
 //    void(
 //        "CollisionSetUserData",
 //        "for the end user",
@@ -1763,22 +1763,22 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //
 //        NewtonCollision.const.p.const("collision", "")
 //    )
-//
-//    void(
-//        "CollisionSetUserID",
-//        "",
-//
-//        NewtonCollision.const.p.const("collision", ""),
-//        unsigned_int("id", "")
-//    )
-//
-//    unsigned_int(
-//        "CollisionGetUserID",
-//        "",
-//
-//        NewtonCollision.const.p.const("collision", "")
-//    )
-//
+
+    void(
+        "CollisionSetUserID",
+        "",
+
+        NewtonCollision.const.p.const("collision", ""),
+        unsigned_int("id", "")
+    )
+
+    unsigned_int(
+        "CollisionGetUserID",
+        "",
+
+        NewtonCollision.const.p.const("collision", "")
+    )
+
 //    void(
 //        "CollisionGetMaterial",
 //        "",
@@ -1808,65 +1808,65 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //
 //        NewtonCollision.const.p.const("collision", "")
 //    )
-//
-//    void(
-//        "CollisionSetMatrix",
-//        "",
-//
-//        NewtonCollision.const.p.const("collision", ""),
-//        float.const.p.const("matrix", "")
-//    )
-//
-//    void(
-//        "CollisionGetMatrix",
-//        "",
-//
-//        NewtonCollision.const.p.const("collision", ""),
-//        float.p.const("matrix", "")
-//    )
-//
-//    void(
-//        "CollisionSetScale",
-//        "",
-//
-//        NewtonCollision.const.p.const("collision", ""),
-//        float("scaleX", ""),
-//        float("scaleY", ""),
-//        float("scaleZ", "")
-//    )
-//
-//    void(
-//        "CollisionGetScale",
-//        "",
-//
-//        NewtonCollision.const.p.const("collision", ""),
-//        float.p.const("scaleX", ""),
-//        float.p.const("scaleY", ""),
-//        float.p.const("scaleZ", "")
-//    )
-//
-//    void(
-//        "DestroyCollision",
-//        "",
-//
-//        NewtonCollision.const.p.const("collision", "")
-//    )
-//
-//    float(
-//        "CollisionGetSkinThickness",
-//        "",
-//
-//        NewtonCollision.const.p.const("collision", "")
-//    )
-//
-//    void(
-//        "CollisionSetSkinThickness",
-//        "",
-//
-//        NewtonCollision.const.p.const("collision", ""),
-//        float("thickness", "")
-//    )
-//
+
+    void(
+        "CollisionSetMatrix",
+        "",
+
+        NewtonCollision.const.p.const("collision", ""),
+        Check(16)..float.const.p.const("matrix", "")
+    )
+
+    void(
+        "CollisionGetMatrix",
+        "",
+
+        NewtonCollision.const.p.const("collision", ""),
+        Check(16)..float.p.const("matrix", "")
+    )
+
+    void(
+        "CollisionSetScale",
+        "",
+
+        NewtonCollision.const.p.const("collision", ""),
+        float("scaleX", ""),
+        float("scaleY", ""),
+        float("scaleZ", "")
+    )
+
+    void(
+        "CollisionGetScale",
+        "",
+
+        NewtonCollision.const.p.const("collision", ""),
+        Check(1)..float.p.const("scaleX", ""),
+        Check(1)..float.p.const("scaleY", ""),
+        Check(1).. float.p.const("scaleZ", "")
+    )
+
+    void(
+        "DestroyCollision",
+        "",
+
+        NewtonCollision.const.p.const("collision", "")
+    )
+
+    float(
+        "CollisionGetSkinThickness",
+        "",
+
+        NewtonCollision.const.p.const("collision", "")
+    )
+
+    void(
+        "CollisionSetSkinThickness",
+        "",
+
+        NewtonCollision.const.p.const("collision", ""),
+        float("thickness", "")
+    )
+
 //    int(
 //        "CollisionIntersectionTest",
 //        "",
@@ -2504,43 +2504,43 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
         Check(4)..float.p.const("rotation", "")
     )
 
-//    void(
-//        "BodyGetMass",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        float.p("mass", ""),
-//        float.p.const("Ixx", ""),
-//        float.p.const("Iyy", ""),
-//        float.p.const("Izz", "")
-//    )
-//
-//    void(
-//        "BodyGetInvMass",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        float.p.const("invMass", ""),
-//        float.p.const("invIxx", ""),
-//        float.p.const("invIyy", ""),
-//        float.p.const("invIzz", "")
-//    )
-//
-//    void(
-//        "BodyGetInertiaMatrix",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        float.p.const("inertiaMatrix", "")
-//    )
-//
-//    void(
-//        "BodyGetInvInertiaMatrix",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        float.p.const("invInertiaMatrix", "")
-//    )
+    void(
+        "BodyGetMass",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        Check(1)..float.p("mass", ""),
+        Check(1)..float.p.const("Ixx", ""),
+        Check(1)..float.p.const("Iyy", ""),
+        Check(1)..float.p.const("Izz", "")
+    )
+
+    void(
+        "BodyGetInvMass",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        Check(1)..float.p.const("invMass", ""),
+        Check(1)..float.p.const("invIxx", ""),
+        Check(1)..float.p.const("invIyy", ""),
+        Check(1)..float.p.const("invIzz", "")
+    )
+
+    void(
+        "BodyGetInertiaMatrix",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        Check(16)..float.p.const("inertiaMatrix", "")
+    )
+
+    void(
+        "BodyGetInvInertiaMatrix",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        Check(16)..float.p.const("invInertiaMatrix", "")
+    )
 //
 //    void(
 //        "BodyGetOmega",
