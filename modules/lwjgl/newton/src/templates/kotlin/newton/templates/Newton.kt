@@ -2541,23 +2541,23 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
         NewtonBody.const.p.const("body", ""),
         Check(16)..float.p.const("invInertiaMatrix", "")
     )
-//
-//    void(
-//        "BodyGetOmega",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        float.p.const("vector", "")
-//    )
-//
-//    void(
-//        "BodyGetVelocity",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        float.p.const("vector", "")
-//    )
-//
+
+    void(
+        "BodyGetOmega",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        Check(3)..float.p.const("vector", "")
+    )
+
+    void(
+        "BodyGetVelocity",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        Check(3)..float.p.const("vector", "")
+    )
+
 //    void(
 //        "BodyGetAlpha",
 //        "",
@@ -2565,39 +2565,39 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //        NewtonBody.const.p.const("body", ""),
 //        float.p.const("vector", "")
 //    )
-//
-//    void(
-//        "BodyGetAcceleration",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        float.p.const("vector", "")
-//    )
-//
-//    void(
-//        "BodyGetForce",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        float.p.const("vector", "")
-//    )
-//
-//    void(
-//        "BodyGetTorque",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        float.p.const("vector", "")
-//    )
-//
-//    void(
-//        "BodyGetCentreOfMass",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        float.p.const("com", "")
-//    )
-//
+
+    void(
+        "BodyGetAcceleration",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        Check(3)..float.p.const("vector", "")
+    )
+
+    void(
+        "BodyGetForce",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        Check(3)..float.p.const("vector", "")
+    )
+
+    void(
+        "BodyGetTorque",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        Check(3)..float.p.const("vector", "")
+    )
+
+    void(
+        "BodyGetCentreOfMass",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        Check(3)..float.p.const("com", "")
+    )
+
 //    void(
 //        "BodyGetPointVelocity",
 //        "",
@@ -2638,30 +2638,30 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //        float.const.p.const("pointArray", ""),
 //        float("timestep", "")
 //    )
-//
-//    void(
-//        "BodyIntegrateVelocity",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        float("timestep", "")
-//    )
-//
-//    float(
-//        "BodyGetLinearDamping",
-//        "",
-//
-//        NewtonBody.const.p.const("body", "")
-//    )
-//
-//    void(
-//        "BodyGetAngularDamping",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        float.p.const("vector", "")
-//    )
-//
+
+    void(
+        "BodyIntegrateVelocity",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        float("timestep", "")
+    )
+
+    float(
+        "BodyGetLinearDamping",
+        "",
+
+        NewtonBody.const.p.const("body", "")
+    )
+
+    void(
+        "BodyGetAngularDamping",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        Check(3)..float.p.const("vector", "")
+    )
+
 //    void(
 //        "BodyGetAABB",
 //        "",
