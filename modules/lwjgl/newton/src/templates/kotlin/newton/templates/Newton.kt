@@ -482,69 +482,69 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //
 //        NewtonWorld.const.p.const("newtonWorld", "")
 //    )
-//
-//    void.p(
-//        "WorldAddListener",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        char.const.p.const("nameId", ""),
-//        void.p.const("listenerUserData", "")
-//    )
-//
-//    void.p(
-//        "WorldGetListener",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        char.const.p.const("nameId", "")
-//    )
-//
-//    void(
-//        "WorldListenerSetDestructorCallback",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        void.p.const("listener", ""),
-//        NewtonWorldDestroyListenerCallback("destroy", "")
-//    )
-//
-//    void(
-//        "WorldListenerSetPreUpdateCallback",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        void.p.const("listener", ""),
-//        NewtonWorldUpdateListenerCallback("update", "")
-//    )
-//
-//    void(
-//        "WorldListenerSetPostUpdateCallback",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        void.p.const("listener", ""),
-//        NewtonWorldUpdateListenerCallback("update", "")
-//    )
-//
-//    void(
-//        "WorldListenerSetDebugCallback",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        void.p.const("listener", ""),
-//        NewtonWorldListenerDebugCallback("debugCallback", "")
-//    )
-//
-//    void(
-//        "WorldListenerSetBodyDestroyCallback",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        void.p.const("listener", ""),
-//        NewtonWorldListenerBodyDestroyCallback("bodyDestroyCallback", "")
-//    )
-//
+
+    opaque_p(
+        "WorldAddListener",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        charUTF8.const.p.const("nameId", ""),
+        nullable..opaque_p("listenerUserData", "")
+    )
+
+    opaque_p(
+        "WorldGetListener",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        charUTF8.const.p.const("nameId", "")
+    )
+
+    void(
+        "WorldListenerSetDestructorCallback",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        opaque_p.const("listener", ""),
+        NewtonWorldDestroyListenerCallback("destroy", "")
+    )
+
+    void(
+        "WorldListenerSetPreUpdateCallback",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        opaque_p.const("listener", ""),
+        NewtonWorldUpdateListenerCallback("update", "")
+    )
+
+    void(
+        "WorldListenerSetPostUpdateCallback",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        opaque_p.const("listener", ""),
+        NewtonWorldUpdateListenerCallback("update", "")
+    )
+
+    void(
+        "WorldListenerSetDebugCallback",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        opaque_p.const("listener", ""),
+        NewtonWorldListenerDebugCallback("debugCallback", "")
+    )
+
+    void(
+        "WorldListenerSetBodyDestroyCallback",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        opaque_p.const("listener", ""),
+        NewtonWorldListenerBodyDestroyCallback("bodyDestroyCallback", "")
+    )
+
 //    void(
 //        "WorldListenerDebug",
 //        "",
@@ -2444,14 +2444,14 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //
 //        NewtonBody.const.p.const("body", "")
 //    )
-//
-//    NewtonCollision.p(
-//        "BodyGetCollision",
-//        "",
-//
-//        NewtonBody.const.p.const("body", "")
-//    )
-//
+
+    NewtonCollision.p(
+        "BodyGetCollision",
+        "",
+
+        NewtonBody.const.p.const("body", "")
+    )
+
 //    int(
 //        "BodyGetMaterialGroupID",
 //        "",
@@ -2662,229 +2662,229 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
         Check(3)..float.p.const("vector", "")
     )
 
-//    void(
-//        "BodyGetAABB",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        float.p.const("p0", ""),
-//        float.p.const("p1", "")
-//    )
-//
-//    NewtonJoint.p(
-//        "BodyGetFirstJoint",
-//        "",
-//
-//        NewtonBody.const.p.const("body", "")
-//    )
-//
-//    NewtonJoint.p(
-//        "BodyGetNextJoint",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        NewtonJoint.const.p.const("joint", "")
-//    )
-//
-//    NewtonJoint.p(
-//        "BodyGetFirstContactJoint",
-//        "",
-//
-//        NewtonBody.const.p.const("body", "")
-//    )
-//
-//    NewtonJoint.p(
-//        "BodyGetNextContactJoint",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        NewtonJoint.const.p.const("contactJoint", "")
-//    )
-//
-//    NewtonJoint.p(
-//        "BodyFindContact",
-//        "",
-//
-//        NewtonBody.const.p.const("body0", ""),
-//        NewtonBody.const.p.const("body1", "")
-//    )
-//
-//    void.p(
-//        "ContactJointGetFirstContact",
-//        "",
-//
-//        NewtonJoint.const.p.const("contactJoint", "")
-//    )
-//
-//    void.p(
-//        "ContactJointGetNextContact",
-//        "",
-//
-//        NewtonJoint.const.p.const("contactJoint", ""),
-//        void.p.const("contact", "")
-//    )
-//
-//    int(
-//        "ContactJointGetContactCount",
-//        "",
-//
-//        NewtonJoint.const.p.const("contactJoint", "")
-//    )
-//
-//    void(
-//        "ContactJointRemoveContact",
-//        "",
-//
-//        NewtonJoint.const.p.const("contactJoint", ""),
-//        void.p.const("contact", "")
-//    )
-//
-//    float(
-//        "ContactJointGetClosestDistance",
-//        "",
-//
-//        NewtonJoint.const.p.const("contactJoint", "")
-//    )
-//
-//    void(
-//        "ContactJointResetSelftJointCollision",
-//        "",
-//
-//        NewtonJoint.const.p.const("contactJoint", "")
-//    )
-//
-//    void(
-//        "ContactJointResetIntraJointCollision",
-//        "",
-//
-//        NewtonJoint.const.p.const("contactJoint", "")
-//    )
-//
-//    NewtonMaterial.p(
-//        "ContactGetMaterial",
-//        "",
-//
-//        void.const.p.const("contact", "")
-//    )
-//
-//    NewtonCollision.p(
-//        "ContactGetCollision0",
-//        "",
-//
-//        void.const.p.const("contact", "")
-//    )
-//
-//    NewtonCollision.p(
-//        "ContactGetCollision1",
-//        "",
-//
-//        void.const.p.const("contact", "")
-//    )
-//
-//    void.p(
-//        "ContactGetCollisionID0",
-//        "",
-//
-//        void.const.p.const("contact", "")
-//    )
-//
-//    void.p(
-//        "ContactGetCollisionID1",
-//        "",
-//
-//        void.const.p.const("contact", "")
-//    )
-//
-//    void.p(
-//        "JointGetUserData",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", "")
-//    )
-//
-//    void(
-//        "JointSetUserData",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", ""),
-//        void.p.const("userData", "")
-//    )
-//
-//    NewtonBody.p(
-//        "JointGetBody0",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", "")
-//    )
-//
-//    NewtonBody.p(
-//        "JointGetBody1",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", "")
-//    )
-//
-//    void(
-//        "JointGetInfo",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", ""),
-//        NewtonJointRecord.p.const("info", "")
-//    )
-//
-//    int(
-//        "JointGetCollisionState",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", "")
-//    )
-//
-//    void(
-//        "JointSetCollisionState",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", ""),
-//        int("state", "")
-//    )
-//
-//    float(
-//        "JointGetStiffness",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", "")
-//    )
-//
-//    void(
-//        "JointSetStiffness",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", ""),
-//        float("state", "")
-//    )
-//
-//    void(
-//        "DestroyJoint",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        NewtonJoint.const.p.const("joint", "")
-//    )
-//
-//    void(
-//        "JointSetDestructor",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", ""),
-//        NewtonConstraintDestructor("destructor", "")
-//    )
-//
-//    int(
-//        "JointIsActive",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", "")
-//    )
-//
+    void(
+        "BodyGetAABB",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        Check(3)..float.p.const("p0", ""),
+        Check(3)..float.p.const("p1", "")
+    )
+
+    NewtonJoint.p(
+        "BodyGetFirstJoint",
+        "",
+
+        NewtonBody.const.p.const("body", "")
+    )
+
+    NewtonJoint.p(
+        "BodyGetNextJoint",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        NewtonJoint.const.p.const("joint", "")
+    )
+
+    NewtonJoint.p(
+        "BodyGetFirstContactJoint",
+        "",
+
+        NewtonBody.const.p.const("body", "")
+    )
+
+    NewtonJoint.p(
+        "BodyGetNextContactJoint",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        NewtonJoint.const.p.const("contactJoint", "")
+    )
+
+    NewtonJoint.p(
+        "BodyFindContact",
+        "",
+
+        NewtonBody.const.p.const("body0", ""),
+        NewtonBody.const.p.const("body1", "")
+    )
+
+    opaque_p(
+        "ContactJointGetFirstContact",
+        "",
+
+        NewtonJoint.const.p.const("contactJoint", "")
+    )
+
+    opaque_p(
+        "ContactJointGetNextContact",
+        "",
+
+        NewtonJoint.const.p.const("contactJoint", ""),
+        opaque_p.const("contact", "")
+    )
+
+    int(
+        "ContactJointGetContactCount",
+        "",
+
+        NewtonJoint.const.p.const("contactJoint", "")
+    )
+
+    void(
+        "ContactJointRemoveContact",
+        "",
+
+        NewtonJoint.const.p.const("contactJoint", ""),
+        opaque_p.const("contact", "")
+    )
+
+    float(
+        "ContactJointGetClosestDistance",
+        "",
+
+        NewtonJoint.const.p.const("contactJoint", "")
+    )
+
+    void(
+        "ContactJointResetSelftJointCollision",
+        "",
+
+        NewtonJoint.const.p.const("contactJoint", "")
+    )
+
+    void(
+        "ContactJointResetIntraJointCollision",
+        "",
+
+        NewtonJoint.const.p.const("contactJoint", "")
+    )
+
+    NewtonMaterial.p(
+        "ContactGetMaterial",
+        "",
+
+        opaque_p.const("contact", "")
+    )
+
+    NewtonCollision.p(
+        "ContactGetCollision0",
+        "",
+
+        opaque_p.const("contact", "")
+    )
+
+    NewtonCollision.p(
+        "ContactGetCollision1",
+        "",
+
+        opaque_p.const("contact", "")
+    )
+
+    opaque_p(
+        "ContactGetCollisionID0",
+        "",
+
+        opaque_p.const("contact", "")
+    )
+
+    opaque_p(
+        "ContactGetCollisionID1",
+        "",
+
+        opaque_p.const("contact", "")
+    )
+
+    opaque_p(
+        "JointGetUserData",
+        "",
+
+        NewtonJoint.const.p.const("joint", "")
+    )
+
+    void(
+        "JointSetUserData",
+        "",
+
+        NewtonJoint.const.p.const("joint", ""),
+        opaque_p.const("userData", "")
+    )
+
+    NewtonBody.p(
+        "JointGetBody0",
+        "",
+
+        NewtonJoint.const.p.const("joint", "")
+    )
+
+    NewtonBody.p(
+        "JointGetBody1",
+        "",
+
+        NewtonJoint.const.p.const("joint", "")
+    )
+
+    void(
+        "JointGetInfo",
+        "",
+
+        NewtonJoint.const.p.const("joint", ""),
+        NewtonJointRecord.p.const("info", "")
+    )
+
+    int(
+        "JointGetCollisionState",
+        "",
+
+        NewtonJoint.const.p.const("joint", "")
+    )
+
+    void(
+        "JointSetCollisionState",
+        "",
+
+        NewtonJoint.const.p.const("joint", ""),
+        int("state", "")
+    )
+
+    float(
+        "JointGetStiffness",
+        "",
+
+        NewtonJoint.const.p.const("joint", "")
+    )
+
+    void(
+        "JointSetStiffness",
+        "",
+
+        NewtonJoint.const.p.const("joint", ""),
+        float("state", "")
+    )
+
+    void(
+        "DestroyJoint",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        NewtonJoint.const.p.const("joint", "")
+    )
+
+    void(
+        "JointSetDestructor",
+        "",
+
+        NewtonJoint.const.p.const("joint", ""),
+        NewtonConstraintDestructor("destructor", "")
+    )
+
+    int(
+        "JointIsActive",
+        "",
+
+        NewtonJoint.const.p.const("joint", "")
+    )
+
 //    NewtonInverseDynamics.p(
 //        "CreateInverseDynamics",
 //        "",
