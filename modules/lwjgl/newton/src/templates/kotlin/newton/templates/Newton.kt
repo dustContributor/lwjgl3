@@ -819,209 +819,209 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //        NewtonWorld.const.p.const("newtonWorld", ""),
 //        NewtonBody.const.p.const("curBody", "")
 //    )
-//
-//    void.p(
-//        "MaterialGetMaterialPairUserData",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", "")
-//    )
-//
-//    unsigned_int(
-//        "MaterialGetContactFaceAttribute",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", "")
-//    )
-//
-//    NewtonCollision.p(
-//        "MaterialGetBodyCollidingShape",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", ""),
-//        NewtonBody.const.p.const("body", "")
-//    )
-//
-//    float(
-//        "MaterialGetContactNormalSpeed",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", "")
-//    )
-//
-//    void(
-//        "MaterialGetContactForce",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", ""),
-//        NewtonBody.const.p.const("body", ""),
-//        float.p.const("force", "")
-//    )
-//
-//    void(
-//        "MaterialGetContactPositionAndNormal",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", ""),
-//        NewtonBody.const.p.const("body", ""),
-//        float.p.const("posit", ""),
-//        float.p.const("normal", "")
-//    )
-//
-//    void(
-//        "MaterialGetContactTangentDirections",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", ""),
-//        NewtonBody.const.p.const("body", ""),
-//        float.p.const("dir0", ""),
-//        float.p.const("dir1", "")
-//    )
-//
-//    float(
-//        "MaterialGetContactTangentSpeed",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", ""),
-//        int("index", "")
-//    )
-//
-//    float(
-//        "MaterialGetContactMaxNormalImpact",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", "")
-//    )
-//
-//    float(
-//        "MaterialGetContactMaxTangentImpact",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", ""),
-//        int("index", "")
-//    )
-//
-//    float(
-//        "MaterialGetContactPenetration",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", "")
-//    )
-//
-//    void(
-//        "MaterialSetContactSoftness",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", ""),
-//        float("softness", "")
-//    )
-//
-//    void(
-//        "MaterialSetContactThickness",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", ""),
-//        float("thickness", "")
-//    )
-//
-//    void(
-//        "MaterialSetContactElasticity",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", ""),
-//        float("restitution", "")
-//    )
-//
-//    void(
-//        "MaterialSetContactFrictionState",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", ""),
-//        int("state", ""),
-//        int("index", "")
-//    )
-//
-//    void(
-//        "MaterialSetContactFrictionCoef",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", ""),
-//        float("staticFrictionCoef", ""),
-//        float("kineticFrictionCoef", ""),
-//        int("index", "")
-//    )
-//
-//    void(
-//        "MaterialSetContactNormalAcceleration",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", ""),
-//        float("accel", "")
-//    )
-//
-//    void(
-//        "MaterialSetContactNormalDirection",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", ""),
-//        float.const.p.const("directionVector", "")
-//    )
-//
-//    void(
-//        "MaterialSetContactPosition",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", ""),
-//        float.const.p.const("position", "")
-//    )
-//
-//    void(
-//        "MaterialSetContactTangentFriction",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", ""),
-//        float("friction", ""),
-//        int("index", "")
-//    )
-//
-//    void(
-//        "MaterialSetContactTangentAcceleration",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", ""),
-//        float("accel", ""),
-//        int("index", "")
-//    )
-//
-//    void(
-//        "MaterialContactRotateTangentDirections",
-//        "",
-//
-//        NewtonMaterial.const.p.const("material", ""),
-//        float.const.p.const("directionVector", "")
-//    )
-//
-//    float(
-//        "MaterialGetContactPruningTolerance",
-//        "",
-//
-//        NewtonJoint.const.p.const("contactJoint", "")
-//    )
-//
-//    void(
-//        "MaterialSetContactPruningTolerance",
-//        "",
-//
-//        NewtonJoint.const.p.const("contactJoint", ""),
-//        float("tolerance", "")
-//    )
-//
-//    NewtonCollision.p(
-//        "CreateNull",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", "")
-//    )
+
+    opaque_p(
+        "MaterialGetMaterialPairUserData",
+        "",
+
+        NewtonMaterial.const.p.const("material", "")
+    )
+
+    unsigned_int(
+        "MaterialGetContactFaceAttribute",
+        "",
+
+        NewtonMaterial.const.p.const("material", "")
+    )
+
+    NewtonCollision.p(
+        "MaterialGetBodyCollidingShape",
+        "",
+
+        NewtonMaterial.const.p.const("material", ""),
+        NewtonBody.const.p.const("body", "")
+    )
+
+    float(
+        "MaterialGetContactNormalSpeed",
+        "",
+
+        NewtonMaterial.const.p.const("material", "")
+    )
+
+    void(
+        "MaterialGetContactForce",
+        "",
+
+        NewtonMaterial.const.p.const("material", ""),
+        NewtonBody.const.p.const("body", ""),
+        Check(3)..float.p.const("force", "")
+    )
+
+    void(
+        "MaterialGetContactPositionAndNormal",
+        "",
+
+        NewtonMaterial.const.p.const("material", ""),
+        NewtonBody.const.p.const("body", ""),
+        Check(3)..float.p.const("posit", ""),
+        Check(3)..float.p.const("normal", "")
+    )
+
+    void(
+        "MaterialGetContactTangentDirections",
+        "",
+
+        NewtonMaterial.const.p.const("material", ""),
+        NewtonBody.const.p.const("body", ""),
+        Check(3)..float.p.const("dir0", ""),
+        Check(3)..float.p.const("dir1", "")
+    )
+
+    float(
+        "MaterialGetContactTangentSpeed",
+        "",
+
+        NewtonMaterial.const.p.const("material", ""),
+        int("index", "")
+    )
+
+    float(
+        "MaterialGetContactMaxNormalImpact",
+        "",
+
+        NewtonMaterial.const.p.const("material", "")
+    )
+
+    float(
+        "MaterialGetContactMaxTangentImpact",
+        "",
+
+        NewtonMaterial.const.p.const("material", ""),
+        int("index", "")
+    )
+
+    float(
+        "MaterialGetContactPenetration",
+        "",
+
+        NewtonMaterial.const.p.const("material", "")
+    )
+
+    void(
+        "MaterialSetContactSoftness",
+        "",
+
+        NewtonMaterial.const.p.const("material", ""),
+        float("softness", "")
+    )
+
+    void(
+        "MaterialSetContactThickness",
+        "",
+
+        NewtonMaterial.const.p.const("material", ""),
+        float("thickness", "")
+    )
+
+    void(
+        "MaterialSetContactElasticity",
+        "",
+
+        NewtonMaterial.const.p.const("material", ""),
+        float("restitution", "")
+    )
+
+    void(
+        "MaterialSetContactFrictionState",
+        "",
+
+        NewtonMaterial.const.p.const("material", ""),
+        int("state", ""),
+        int("index", "")
+    )
+
+    void(
+        "MaterialSetContactFrictionCoef",
+        "",
+
+        NewtonMaterial.const.p.const("material", ""),
+        float("staticFrictionCoef", ""),
+        float("kineticFrictionCoef", ""),
+        int("index", "")
+    )
+
+    void(
+        "MaterialSetContactNormalAcceleration",
+        "",
+
+        NewtonMaterial.const.p.const("material", ""),
+        float("accel", "")
+    )
+
+    void(
+        "MaterialSetContactNormalDirection",
+        "",
+
+        NewtonMaterial.const.p.const("material", ""),
+        Check(3)..float.const.p.const("directionVector", "")
+    )
+
+    void(
+        "MaterialSetContactPosition",
+        "",
+
+        NewtonMaterial.const.p.const("material", ""),
+        Check(3)..float.const.p.const("position", "")
+    )
+
+    void(
+        "MaterialSetContactTangentFriction",
+        "",
+
+        NewtonMaterial.const.p.const("material", ""),
+        float("friction", ""),
+        int("index", "")
+    )
+
+    void(
+        "MaterialSetContactTangentAcceleration",
+        "",
+
+        NewtonMaterial.const.p.const("material", ""),
+        float("accel", ""),
+        int("index", "")
+    )
+
+    void(
+        "MaterialContactRotateTangentDirections",
+        "",
+
+        NewtonMaterial.const.p.const("material", ""),
+        Check(3)..float.const.p.const("directionVector", "")
+    )
+
+    float(
+        "MaterialGetContactPruningTolerance",
+        "",
+
+        NewtonJoint.const.p.const("contactJoint", "")
+    )
+
+    void(
+        "MaterialSetContactPruningTolerance",
+        "",
+
+        NewtonJoint.const.p.const("contactJoint", ""),
+        float("tolerance", "")
+    )
+
+    NewtonCollision.p(
+        "CreateNull",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", "")
+    )
 
     NewtonCollision.p(
         "CreateSphere",
@@ -2326,81 +2326,81 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
         float("scaleZ", "")
     )
 
-//    int(
-//        "BodyGetSleepState",
-//        "",
-//
-//        NewtonBody.const.p.const("body", "")
-//    )
-//
-//    void(
-//        "BodySetSleepState",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        int("state", "")
-//    )
-//
-//    int(
-//        "BodyGetAutoSleep",
-//        "",
-//
-//        NewtonBody.const.p.const("body", "")
-//    )
-//
-//    void(
-//        "BodySetAutoSleep",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        int("state", "")
-//    )
-//
-//    int(
-//        "BodyGetFreezeState",
-//        "",
-//
-//        NewtonBody.const.p.const("body", "")
-//    )
-//
-//    void(
-//        "BodySetFreezeState",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        int("state", "")
-//    )
-//
-//    void(
-//        "BodySetDestructorCallback",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        NewtonBodyDestructor("callback", "")
-//    )
-//
-//    NewtonBodyDestructor(
-//        "BodyGetDestructorCallback",
-//        "",
-//
-//        NewtonBody.const.p.const("body", "")
-//    )
-//
-//    void(
-//        "BodySetTransformCallback",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        NewtonSetTransform("callback", "")
-//    )
-//
-//    NewtonSetTransform(
-//        "BodyGetTransformCallback",
-//        "",
-//
-//        NewtonBody.const.p.const("body", "")
-//    )
-//
+    int(
+        "BodyGetSleepState",
+        "",
+
+        NewtonBody.const.p.const("body", "")
+    )
+
+    void(
+        "BodySetSleepState",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        int("state", "")
+    )
+
+    int(
+        "BodyGetAutoSleep",
+        "",
+
+        NewtonBody.const.p.const("body", "")
+    )
+
+    void(
+        "BodySetAutoSleep",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        int("state", "")
+    )
+
+    int(
+        "BodyGetFreezeState",
+        "",
+
+        NewtonBody.const.p.const("body", "")
+    )
+
+    void(
+        "BodySetFreezeState",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        int("state", "")
+    )
+
+    void(
+        "BodySetDestructorCallback",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        NewtonBodyDestructor("callback", "")
+    )
+
+    NewtonBodyDestructor(
+        "BodyGetDestructorCallback",
+        "",
+
+        NewtonBody.const.p.const("body", "")
+    )
+
+    void(
+        "BodySetTransformCallback",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        NewtonSetTransform("callback", "")
+    )
+
+    NewtonSetTransform(
+        "BodyGetTransformCallback",
+        "",
+
+        NewtonBody.const.p.const("body", "")
+    )
+
     void(
         "BodySetForceAndTorqueCallback",
         "",
@@ -2408,42 +2408,42 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
         NewtonBody.const.p.const("body", ""),
         NewtonApplyForceAndTorque("callback", "")
     )
-//
-//    NewtonApplyForceAndTorque(
-//        "BodyGetForceAndTorqueCallback",
-//        "",
-//
-//        NewtonBody.const.p.const("body", "")
-//    )
-//
-//    int(
-//        "BodyGetID",
-//        "",
-//
-//        NewtonBody.const.p.const("body", "")
-//    )
-//
-//    void(
-//        "BodySetUserData",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        void.p.const("userData", "")
-//    )
-//
-//    void.p(
-//        "BodyGetUserData",
-//        "",
-//
-//        NewtonBody.const.p.const("body", "")
-//    )
-//
-//    NewtonWorld.p(
-//        "BodyGetWorld",
-//        "",
-//
-//        NewtonBody.const.p.const("body", "")
-//    )
+
+    NewtonApplyForceAndTorque(
+        "BodyGetForceAndTorqueCallback",
+        "",
+
+        NewtonBody.const.p.const("body", "")
+    )
+
+    int(
+        "BodyGetID",
+        "",
+
+        NewtonBody.const.p.const("body", "")
+    )
+
+    void(
+        "BodySetUserData",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        opaque_p.const("userData", "")
+    )
+
+    opaque_p(
+        "BodyGetUserData",
+        "",
+
+        NewtonBody.const.p.const("body", "")
+    )
+
+    NewtonWorld.p(
+        "BodyGetWorld",
+        "",
+
+        NewtonBody.const.p.const("body", "")
+    )
 
     NewtonCollision.p(
         "BodyGetCollision",
@@ -2452,33 +2452,33 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
         NewtonBody.const.p.const("body", "")
     )
 
-//    int(
-//        "BodyGetMaterialGroupID",
-//        "",
-//
-//        NewtonBody.const.p.const("body", "")
-//    )
-//
-//    int(
-//        "BodyGetSerializedID",
-//        "",
-//
-//        NewtonBody.const.p.const("body", "")
-//    )
-//
-//    int(
-//        "BodyGetContinuousCollisionMode",
-//        "",
-//
-//        NewtonBody.const.p.const("body", "")
-//    )
-//
-//    int(
-//        "BodyGetJointRecursiveCollision",
-//        "",
-//
-//        NewtonBody.const.p.const("body", "")
-//    )
+    int(
+        "BodyGetMaterialGroupID",
+        "",
+
+        NewtonBody.const.p.const("body", "")
+    )
+
+    int(
+        "BodyGetSerializedID",
+        "",
+
+        NewtonBody.const.p.const("body", "")
+    )
+
+    int(
+        "BodyGetContinuousCollisionMode",
+        "",
+
+        NewtonBody.const.p.const("body", "")
+    )
+
+    int(
+        "BodyGetJointRecursiveCollision",
+        "",
+
+        NewtonBody.const.p.const("body", "")
+    )
 
     void(
         "BodyGetPosition",
@@ -2558,13 +2558,13 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
         Check(3)..float.p.const("vector", "")
     )
 
-//    void(
-//        "BodyGetAlpha",
-//        "",
-//
-//        NewtonBody.const.p.const("body", ""),
-//        float.p.const("vector", "")
-//    )
+    void(
+        "BodyGetAlpha",
+        "",
+
+        NewtonBody.const.p.const("body", ""),
+        Check(3)..float.p.const("vector", "")
+    )
 
     void(
         "BodyGetAcceleration",
@@ -2885,116 +2885,116 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
         NewtonJoint.const.p.const("joint", "")
     )
 
-//    NewtonInverseDynamics.p(
-//        "CreateInverseDynamics",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", "")
-//    )
-//
-//    void(
-//        "InverseDynamicsDestroy",
-//        "",
-//
-//        NewtonInverseDynamics.p.const("inverseDynamics", "")
-//    )
-//
-//    void.p(
-//        "InverseDynamicsGetRoot",
-//        "",
-//
-//        NewtonInverseDynamics.p.const("inverseDynamics", "")
-//    )
-//
-//    void.p(
-//        "InverseDynamicsGetNextChildNode",
-//        "",
-//
-//        NewtonInverseDynamics.p.const("inverseDynamics", ""),
-//        void.p.const("node", "")
-//    )
-//
-//    void.p(
-//        "InverseDynamicsGetFirstChildNode",
-//        "",
-//
-//        NewtonInverseDynamics.p.const("inverseDynamics", ""),
-//        void.p.const("parentNode", "")
-//    )
-//
-//    NewtonBody.p(
-//        "InverseDynamicsGetBody",
-//        "",
-//
-//        NewtonInverseDynamics.p.const("inverseDynamics", ""),
-//        void.p.const("node", "")
-//    )
-//
-//    NewtonJoint.p(
-//        "InverseDynamicsGetJoint",
-//        "",
-//
-//        NewtonInverseDynamics.p.const("inverseDynamics", ""),
-//        void.p.const("node", "")
-//    )
-//
-//    NewtonJoint.p(
-//        "InverseDynamicsCreateEffector",
-//        "",
-//
-//        NewtonInverseDynamics.p.const("inverseDynamics", ""),
-//        void.p.const("node", ""),
-//        NewtonUserBilateralCallback("callback", "")
-//    )
-//
-//    void(
-//        "InverseDynamicsDestroyEffector",
-//        "",
-//
-//        NewtonJoint.p.const("effector", "")
-//    )
-//
-//    void.p(
-//        "InverseDynamicsAddRoot",
-//        "",
-//
-//        NewtonInverseDynamics.p.const("inverseDynamics", ""),
-//        NewtonBody.p.const("root", "")
-//    )
-//
-//    void.p(
-//        "InverseDynamicsAddChildNode",
-//        "",
-//
-//        NewtonInverseDynamics.p.const("inverseDynamics", ""),
-//        void.p.const("parentNode", ""),
-//        NewtonJoint.p.const("joint", "")
-//    )
-//
-//    bool(
-//        "InverseDynamicsAddLoopJoint",
-//        "",
-//
-//        NewtonInverseDynamics.p.const("inverseDynamics", ""),
-//        NewtonJoint.p.const("joint", "")
-//    )
-//
-//    void(
-//        "InverseDynamicsEndBuild",
-//        "",
-//
-//        NewtonInverseDynamics.p.const("inverseDynamics", "")
-//    )
-//
-//    void(
-//        "InverseDynamicsUpdate",
-//        "",
-//
-//        NewtonInverseDynamics.p.const("inverseDynamics", ""),
-//        float("timestep", ""),
-//        int("threadIndex", "")
-//    )
-//
+    NewtonInverseDynamics.p(
+        "CreateInverseDynamics",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", "")
+    )
+
+    void(
+        "InverseDynamicsDestroy",
+        "",
+
+        NewtonInverseDynamics.p.const("inverseDynamics", "")
+    )
+
+    opaque_p(
+        "InverseDynamicsGetRoot",
+        "",
+
+        NewtonInverseDynamics.p.const("inverseDynamics", "")
+    )
+
+    opaque_p(
+        "InverseDynamicsGetNextChildNode",
+        "",
+
+        NewtonInverseDynamics.p.const("inverseDynamics", ""),
+        opaque_p.const("node", "")
+    )
+
+    opaque_p(
+        "InverseDynamicsGetFirstChildNode",
+        "",
+
+        NewtonInverseDynamics.p.const("inverseDynamics", ""),
+        opaque_p.const("parentNode", "")
+    )
+
+    NewtonBody.p(
+        "InverseDynamicsGetBody",
+        "",
+
+        NewtonInverseDynamics.p.const("inverseDynamics", ""),
+        opaque_p.const("node", "")
+    )
+
+    NewtonJoint.p(
+        "InverseDynamicsGetJoint",
+        "",
+
+        NewtonInverseDynamics.p.const("inverseDynamics", ""),
+        opaque_p.const("node", "")
+    )
+
+    NewtonJoint.p(
+        "InverseDynamicsCreateEffector",
+        "",
+
+        NewtonInverseDynamics.p.const("inverseDynamics", ""),
+        opaque_p.const("node", ""),
+        NewtonUserBilateralCallback("callback", "")
+    )
+
+    void(
+        "InverseDynamicsDestroyEffector",
+        "",
+
+        NewtonJoint.p.const("effector", "")
+    )
+
+    opaque_p(
+        "InverseDynamicsAddRoot",
+        "",
+
+        NewtonInverseDynamics.p.const("inverseDynamics", ""),
+        NewtonBody.p.const("root", "")
+    )
+
+    opaque_p(
+        "InverseDynamicsAddChildNode",
+        "",
+
+        NewtonInverseDynamics.p.const("inverseDynamics", ""),
+        opaque_p.const("parentNode", ""),
+        NewtonJoint.p.const("joint", "")
+    )
+
+    bool(
+        "InverseDynamicsAddLoopJoint",
+        "",
+
+        NewtonInverseDynamics.p.const("inverseDynamics", ""),
+        NewtonJoint.p.const("joint", "")
+    )
+
+    void(
+        "InverseDynamicsEndBuild",
+        "",
+
+        NewtonInverseDynamics.p.const("inverseDynamics", "")
+    )
+
+    void(
+        "InverseDynamicsUpdate",
+        "",
+
+        NewtonInverseDynamics.p.const("inverseDynamics", ""),
+        float("timestep", ""),
+        int("threadIndex", "")
+    )
+
 //    NewtonCollision.p(
 //        "CreateMassSpringDamperSystem",
 //        "",
@@ -3010,100 +3010,100 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //        float.const.p.const("linksSpring", ""),
 //        float.const.p.const("linksDamper", "")
 //    )
-//
-//    NewtonCollision.p(
-//        "CreateDeformableSolid",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        NewtonMesh.const.p.const("mesh", ""),
-//        int("shapeID", "")
-//    )
-//
-//    int(
-//        "DeformableMeshGetParticleCount",
-//        "",
-//
-//        NewtonCollision.const.p.const("deformableMesh", "")
-//    )
-//
-//    int(
-//        "DeformableMeshGetParticleStrideInBytes",
-//        "",
-//
-//        NewtonCollision.const.p.const("deformableMesh", "")
-//    )
-//
+
+    NewtonCollision.p(
+        "CreateDeformableSolid",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        NewtonMesh.const.p.const("mesh", ""),
+        int("shapeID", "")
+    )
+
+    int(
+        "DeformableMeshGetParticleCount",
+        "",
+
+        NewtonCollision.const.p.const("deformableMesh", "")
+    )
+
+    int(
+        "DeformableMeshGetParticleStrideInBytes",
+        "",
+
+        NewtonCollision.const.p.const("deformableMesh", "")
+    )
+// TODO: Size???
 //    float.const.p(
 //        "DeformableMeshGetParticleArray",
 //        "",
 //
 //        NewtonCollision.const.p.const("deformableMesh", "")
 //    )
-//
-//    NewtonJoint.p(
-//        "ConstraintCreateBall",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        float.const.p("pivotPoint", ""),
-//        NewtonBody.const.p.const("childBody", ""),
-//        NewtonBody.const.p.const("parentBody", "")
-//    )
-//
-//    void(
-//        "BallSetUserCallback",
-//        "",
-//
-//        NewtonJoint.const.p.const("ball", ""),
-//        NewtonBallCallback("callback", "")
-//    )
-//
-//    void(
-//        "BallGetJointAngle",
-//        "",
-//
-//        NewtonJoint.const.p.const("ball", ""),
-//        float.p("angle", "")
-//    )
-//
-//    void(
-//        "BallGetJointOmega",
-//        "",
-//
-//        NewtonJoint.const.p.const("ball", ""),
-//        float.p("omega", "")
-//    )
-//
-//    void(
-//        "BallGetJointForce",
-//        "",
-//
-//        NewtonJoint.const.p.const("ball", ""),
-//        float.p.const("force", "")
-//    )
-//
-//    void(
-//        "BallSetConeLimits",
-//        "",
-//
-//        NewtonJoint.const.p.const("ball", ""),
-//        float.const.p("pin", ""),
-//        float("maxConeAngle", ""),
-//        float("maxTwistAngle", "")
-//    )
-//
+
+    NewtonJoint.p(
+        "ConstraintCreateBall",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        Check(3)..float.const.p("pivotPoint", ""),
+        NewtonBody.const.p.const("childBody", ""),
+        NewtonBody.const.p.const("parentBody", "")
+    )
+
+    void(
+        "BallSetUserCallback",
+        "",
+
+        NewtonJoint.const.p.const("ball", ""),
+        NewtonBallCallback("callback", "")
+    )
+
+    void(
+        "BallGetJointAngle",
+        "",
+
+        NewtonJoint.const.p.const("ball", ""),
+        Check(3)..float.p("angle", "")
+    )
+
+    void(
+        "BallGetJointOmega",
+        "",
+
+        NewtonJoint.const.p.const("ball", ""),
+        Check(3)..float.p("omega", "")
+    )
+
+    void(
+        "BallGetJointForce",
+        "",
+
+        NewtonJoint.const.p.const("ball", ""),
+        Check(3)..float.p.const("force", "")
+    )
+
+    void(
+        "BallSetConeLimits",
+        "",
+
+        NewtonJoint.const.p.const("ball", ""),
+        Check(3)..float.const.p("pin", ""),
+        float("maxConeAngle", ""),
+        float("maxTwistAngle", "")
+    )
+// TODO undefined reference to `NewtonConstraintCreateHinge'
 //    NewtonJoint.p(
 //        "ConstraintCreateHinge",
 //        "",
 //
 //        NewtonWorld.const.p.const("newtonWorld", ""),
-//        float.const.p("pivotPoint", ""),
-//        float.const.p("pinDir", ""),
+//        Check(3)..float.const.p("pivotPoint", ""),
+//        Check(3)..float.const.p("pinDir", ""),
 //        NewtonBody.const.p.const("childBody", ""),
 //        NewtonBody.const.p.const("parentBody", "")
 //    )
-//
+// TODO undefined reference to `NewtonHingeSetUserCallback'
 //    void(
 //        "HingeSetUserCallback",
 //        "",
@@ -3111,29 +3111,29 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //        NewtonJoint.const.p.const("hinge", ""),
 //        NewtonHingeCallback("callback", "")
 //    )
-//
+// TODO undefined reference to `NewtonHingeGetJointAngle'
 //    float(
 //        "HingeGetJointAngle",
 //        "",
 //
 //        NewtonJoint.const.p.const("hinge", "")
 //    )
-//
+// TODO undefined reference to `NewtonHingeGetJointOmega'
 //    float(
 //        "HingeGetJointOmega",
 //        "",
 //
 //        NewtonJoint.const.p.const("hinge", "")
 //    )
-//
+// TODO undefined reference to `NewtonHingeGetJointForce'
 //    void(
 //        "HingeGetJointForce",
 //        "",
 //
 //        NewtonJoint.const.p.const("hinge", ""),
-//        float.p.const("force", "")
+//        Check(3)..float.p.const("force", "")
 //    )
-//
+// TODO undefined reference to `NewtonHingeCalculateStopAlpha'
 //    float(
 //        "HingeCalculateStopAlpha",
 //        "",
@@ -3142,388 +3142,388 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //        NewtonHingeSliderUpdateDesc.const.p.const("desc", ""),
 //        float("angle", "")
 //    )
-//
-//    NewtonJoint.p(
-//        "ConstraintCreateSlider",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        float.const.p("pivotPoint", ""),
-//        float.const.p("pinDir", ""),
-//        NewtonBody.const.p.const("childBody", ""),
-//        NewtonBody.const.p.const("parentBody", "")
-//    )
-//
-//    void(
-//        "SliderSetUserCallback",
-//        "",
-//
-//        NewtonJoint.const.p.const("slider", ""),
-//        NewtonSliderCallback("callback", "")
-//    )
-//
-//    float(
-//        "SliderGetJointPosit",
-//        "",
-//
-//        NewtonJoint.const.p("slider", "")
-//    )
-//
-//    float(
-//        "SliderGetJointVeloc",
-//        "",
-//
-//        NewtonJoint.const.p("slider", "")
-//    )
-//
-//    void(
-//        "SliderGetJointForce",
-//        "",
-//
-//        NewtonJoint.const.p.const("slider", ""),
-//        float.p.const("force", "")
-//    )
-//
-//    float(
-//        "SliderCalculateStopAccel",
-//        "",
-//
-//        NewtonJoint.const.p.const("slider", ""),
-//        NewtonHingeSliderUpdateDesc.const.p.const("desc", ""),
-//        float("position", "")
-//    )
-//
-//    NewtonJoint.p(
-//        "ConstraintCreateCorkscrew",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        float.const.p("pivotPoint", ""),
-//        float.const.p("pinDir", ""),
-//        NewtonBody.const.p.const("childBody", ""),
-//        NewtonBody.const.p.const("parentBody", "")
-//    )
-//
-//    void(
-//        "CorkscrewSetUserCallback",
-//        "",
-//
-//        NewtonJoint.const.p.const("corkscrew", ""),
-//        NewtonCorkscrewCallback("callback", "")
-//    )
-//
-//    float(
-//        "CorkscrewGetJointPosit",
-//        "",
-//
-//        NewtonJoint.const.p.const("corkscrew", "")
-//    )
-//
-//    float(
-//        "CorkscrewGetJointAngle",
-//        "",
-//
-//        NewtonJoint.const.p.const("corkscrew", "")
-//    )
-//
-//    float(
-//        "CorkscrewGetJointVeloc",
-//        "",
-//
-//        NewtonJoint.const.p.const("corkscrew", "")
-//    )
-//
-//    float(
-//        "CorkscrewGetJointOmega",
-//        "",
-//
-//        NewtonJoint.const.p.const("corkscrew", "")
-//    )
-//
-//    void(
-//        "CorkscrewGetJointForce",
-//        "",
-//
-//        NewtonJoint.const.p.const("corkscrew", ""),
-//        float.p.const("force", "")
-//    )
-//
-//    float(
-//        "CorkscrewCalculateStopAlpha",
-//        "",
-//
-//        NewtonJoint.const.p.const("corkscrew", ""),
-//        NewtonHingeSliderUpdateDesc.const.p.const("desc", ""),
-//        float("angle", "")
-//    )
-//
-//    float(
-//        "CorkscrewCalculateStopAccel",
-//        "",
-//
-//        NewtonJoint.const.p.const("corkscrew", ""),
-//        NewtonHingeSliderUpdateDesc.const.p.const("desc", ""),
-//        float("position", "")
-//    )
-//
-//    NewtonJoint.p(
-//        "ConstraintCreateUniversal",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        float.const.p("pivotPoint", ""),
-//        float.const.p("pinDir0", ""),
-//        float.const.p("pinDir1", ""),
-//        NewtonBody.const.p.const("childBody", ""),
-//        NewtonBody.const.p.const("parentBody", "")
-//    )
-//
-//    void(
-//        "UniversalSetUserCallback",
-//        "",
-//
-//        NewtonJoint.const.p.const("universal", ""),
-//        NewtonUniversalCallback("callback", "")
-//    )
-//
-//    float(
-//        "UniversalGetJointAngle0",
-//        "",
-//
-//        NewtonJoint.const.p.const("universal", "")
-//    )
-//
-//    float(
-//        "UniversalGetJointAngle1",
-//        "",
-//
-//        NewtonJoint.const.p.const("universal", "")
-//    )
-//
-//    float(
-//        "UniversalGetJointOmega0",
-//        "",
-//
-//        NewtonJoint.const.p.const("universal", "")
-//    )
-//
-//    float(
-//        "UniversalGetJointOmega1",
-//        "",
-//
-//        NewtonJoint.const.p.const("universal", "")
-//    )
-//
-//    void(
-//        "UniversalGetJointForce",
-//        "",
-//
-//        NewtonJoint.const.p.const("universal", ""),
-//        float.p.const("force", "")
-//    )
-//
-//    float(
-//        "UniversalCalculateStopAlpha0",
-//        "",
-//
-//        NewtonJoint.const.p.const("universal", ""),
-//        NewtonHingeSliderUpdateDesc.const.p.const("desc", ""),
-//        float("angle", "")
-//    )
-//
-//    float(
-//        "UniversalCalculateStopAlpha1",
-//        "",
-//
-//        NewtonJoint.const.p.const("universal", ""),
-//        NewtonHingeSliderUpdateDesc.const.p.const("desc", ""),
-//        float("angle", "")
-//    )
-//
-//    NewtonJoint.p(
-//        "ConstraintCreateUpVector",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        float.const.p("pinDir", ""),
-//        NewtonBody.const.p.const("body", "")
-//    )
-//
-//    void(
-//        "UpVectorGetPin",
-//        "",
-//
-//        NewtonJoint.const.p.const("upVector", ""),
-//        float.p("pin", "")
-//    )
-//
-//    void(
-//        "UpVectorSetPin",
-//        "",
-//
-//        NewtonJoint.const.p.const("upVector", ""),
-//        float.const.p("pin", "")
-//    )
-//
-//    NewtonJoint.p(
-//        "ConstraintCreateUserJoint",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        int("maxDOF", ""),
-//        NewtonUserBilateralCallback("callback", ""),
-//        NewtonBody.const.p.const("childBody", ""),
-//        NewtonBody.const.p.const("parentBody", "")
-//    )
-//
-//    int(
-//        "UserJointGetSolverModel",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", "")
-//    )
-//
-//    void(
-//        "UserJointSetSolverModel",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", ""),
-//        int("model", "")
-//    )
-//
-//    void(
-//        "UserJointSetFeedbackCollectorCallback",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", ""),
-//        NewtonUserBilateralCallback("getFeedback", "")
-//    )
-//
-//    void(
-//        "UserJointAddLinearRow",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", ""),
-//        float.const.p.const("pivot0", ""),
-//        float.const.p.const("pivot1", ""),
-//        float.const.p.const("dir", "")
-//    )
-//
-//    void(
-//        "UserJointAddAngularRow",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", ""),
-//        float("relativeAngle", ""),
-//        float.const.p.const("dir", "")
-//    )
-//
-//    void(
-//        "UserJointAddGeneralRow",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", ""),
-//        float.const.p.const("jacobian0", ""),
-//        float.const.p.const("jacobian1", "")
-//    )
-//
-//    void(
-//        "UserJointSetRowMinimumFriction",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", ""),
-//        float("friction", "")
-//    )
-//
-//    void(
-//        "UserJointSetRowMaximumFriction",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", ""),
-//        float("friction", "")
-//    )
-//
-//    float(
-//        "UserJointCalculateRowZeroAccelaration",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", "")
-//    )
-//
-//    float(
-//        "UserJointGetRowAcceleration",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", "")
-//    )
-//
-//    void(
-//        "UserJointSetRowAsInverseDynamics",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", "")
-//    )
-//
-//    void(
-//        "UserJointSetRowAcceleration",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", ""),
-//        float("acceleration", "")
-//    )
-//
-//    void(
-//        "UserJointSetRowSpringDamperAcceleration",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", ""),
-//        float("rowStiffness", ""),
-//        float("spring", ""),
-//        float("damper", "")
-//    )
-//
-//    void(
-//        "UserJointSetRowStiffness",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", ""),
-//        float("stiffness", "")
-//    )
-//
-//    int(
-//        "UserJoinRowsCount",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", "")
-//    )
-//
-//    void(
-//        "UserJointGetGeneralRow",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", ""),
-//        int("index", ""),
-//        float.p.const("jacobian0", ""),
-//        float.p.const("jacobian1", "")
-//    )
-//
-//    float(
-//        "UserJointGetRowForce",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", ""),
-//        int("row", "")
-//    )
-//
-//    int(
-//        "UserJointSubmitImmediateModeConstraint",
-//        "",
-//
-//        NewtonJoint.const.p.const("joint", ""),
-//        NewtonConstraintDescriptor.p.const("descriptor", ""),
-//        float("timestep", "")
-//    )
-//
+
+    NewtonJoint.p(
+        "ConstraintCreateSlider",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        Check(3)..float.const.p("pivotPoint", ""),
+        Check(3)..float.const.p("pinDir", ""),
+        NewtonBody.const.p.const("childBody", ""),
+        NewtonBody.const.p.const("parentBody", "")
+    )
+
+    void(
+        "SliderSetUserCallback",
+        "",
+
+        NewtonJoint.const.p.const("slider", ""),
+        NewtonSliderCallback("callback", "")
+    )
+
+    float(
+        "SliderGetJointPosit",
+        "",
+
+        NewtonJoint.const.p("slider", "")
+    )
+
+    float(
+        "SliderGetJointVeloc",
+        "",
+
+        NewtonJoint.const.p("slider", "")
+    )
+
+    void(
+        "SliderGetJointForce",
+        "",
+
+        NewtonJoint.const.p.const("slider", ""),
+        Check(3)..float.p.const("force", "")
+    )
+
+    float(
+        "SliderCalculateStopAccel",
+        "",
+
+        NewtonJoint.const.p.const("slider", ""),
+        NewtonHingeSliderUpdateDesc.const.p.const("desc", ""),
+        float("position", "")
+    )
+
+    NewtonJoint.p(
+        "ConstraintCreateCorkscrew",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        Check(3)..float.const.p("pivotPoint", ""),
+        Check(3)..float.const.p("pinDir", ""),
+        NewtonBody.const.p.const("childBody", ""),
+        NewtonBody.const.p.const("parentBody", "")
+    )
+
+    void(
+        "CorkscrewSetUserCallback",
+        "",
+
+        NewtonJoint.const.p.const("corkscrew", ""),
+        NewtonCorkscrewCallback("callback", "")
+    )
+
+    float(
+        "CorkscrewGetJointPosit",
+        "",
+
+        NewtonJoint.const.p.const("corkscrew", "")
+    )
+
+    float(
+        "CorkscrewGetJointAngle",
+        "",
+
+        NewtonJoint.const.p.const("corkscrew", "")
+    )
+
+    float(
+        "CorkscrewGetJointVeloc",
+        "",
+
+        NewtonJoint.const.p.const("corkscrew", "")
+    )
+
+    float(
+        "CorkscrewGetJointOmega",
+        "",
+
+        NewtonJoint.const.p.const("corkscrew", "")
+    )
+
+    void(
+        "CorkscrewGetJointForce",
+        "",
+
+        NewtonJoint.const.p.const("corkscrew", ""),
+        Check(3)..float.p.const("force", "")
+    )
+
+    float(
+        "CorkscrewCalculateStopAlpha",
+        "",
+
+        NewtonJoint.const.p.const("corkscrew", ""),
+        NewtonHingeSliderUpdateDesc.const.p.const("desc", ""),
+        float("angle", "")
+    )
+
+    float(
+        "CorkscrewCalculateStopAccel",
+        "",
+
+        NewtonJoint.const.p.const("corkscrew", ""),
+        NewtonHingeSliderUpdateDesc.const.p.const("desc", ""),
+        float("position", "")
+    )
+
+    NewtonJoint.p(
+        "ConstraintCreateUniversal",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        Check(3)..float.const.p("pivotPoint", ""),
+        Check(3)..float.const.p("pinDir0", ""),
+        Check(3)..float.const.p("pinDir1", ""),
+        NewtonBody.const.p.const("childBody", ""),
+        NewtonBody.const.p.const("parentBody", "")
+    )
+
+    void(
+        "UniversalSetUserCallback",
+        "",
+
+        NewtonJoint.const.p.const("universal", ""),
+        NewtonUniversalCallback("callback", "")
+    )
+
+    float(
+        "UniversalGetJointAngle0",
+        "",
+
+        NewtonJoint.const.p.const("universal", "")
+    )
+
+    float(
+        "UniversalGetJointAngle1",
+        "",
+
+        NewtonJoint.const.p.const("universal", "")
+    )
+
+    float(
+        "UniversalGetJointOmega0",
+        "",
+
+        NewtonJoint.const.p.const("universal", "")
+    )
+
+    float(
+        "UniversalGetJointOmega1",
+        "",
+
+        NewtonJoint.const.p.const("universal", "")
+    )
+
+    void(
+        "UniversalGetJointForce",
+        "",
+
+        NewtonJoint.const.p.const("universal", ""),
+        Check(3)..float.p.const("force", "")
+    )
+
+    float(
+        "UniversalCalculateStopAlpha0",
+        "",
+
+        NewtonJoint.const.p.const("universal", ""),
+        NewtonHingeSliderUpdateDesc.const.p.const("desc", ""),
+        float("angle", "")
+    )
+
+    float(
+        "UniversalCalculateStopAlpha1",
+        "",
+
+        NewtonJoint.const.p.const("universal", ""),
+        NewtonHingeSliderUpdateDesc.const.p.const("desc", ""),
+        float("angle", "")
+    )
+
+    NewtonJoint.p(
+        "ConstraintCreateUpVector",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        Check(3)..float.const.p("pinDir", ""),
+        NewtonBody.const.p.const("body", "")
+    )
+
+    void(
+        "UpVectorGetPin",
+        "",
+
+        NewtonJoint.const.p.const("upVector", ""),
+        Check(3)..float.p("pin", "")
+    )
+
+    void(
+        "UpVectorSetPin",
+        "",
+
+        NewtonJoint.const.p.const("upVector", ""),
+        Check(3)..float.const.p("pin", "")
+    )
+
+    NewtonJoint.p(
+        "ConstraintCreateUserJoint",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        int("maxDOF", ""),
+        NewtonUserBilateralCallback("callback", ""),
+        NewtonBody.const.p.const("childBody", ""),
+        NewtonBody.const.p.const("parentBody", "")
+    )
+
+    int(
+        "UserJointGetSolverModel",
+        "",
+
+        NewtonJoint.const.p.const("joint", "")
+    )
+
+    void(
+        "UserJointSetSolverModel",
+        "",
+
+        NewtonJoint.const.p.const("joint", ""),
+        int("model", "")
+    )
+
+    void(
+        "UserJointSetFeedbackCollectorCallback",
+        "",
+
+        NewtonJoint.const.p.const("joint", ""),
+        NewtonUserBilateralCallback("getFeedback", "")
+    )
+
+    void(
+        "UserJointAddLinearRow",
+        "",
+
+        NewtonJoint.const.p.const("joint", ""),
+        Check(3)..float.const.p.const("pivot0", ""),
+        Check(3)..float.const.p.const("pivot1", ""),
+        Check(3)..float.const.p.const("dir", "")
+    )
+
+    void(
+        "UserJointAddAngularRow",
+        "",
+
+        NewtonJoint.const.p.const("joint", ""),
+        float("relativeAngle", ""),
+        Check(3)..float.const.p.const("dir", "")
+    )
+
+    void(
+        "UserJointAddGeneralRow",
+        "",
+
+        NewtonJoint.const.p.const("joint", ""),
+        Check(6)..float.const.p.const("jacobian0", ""),
+        Check(6)..float.const.p.const("jacobian1", "")
+    )
+
+    void(
+        "UserJointSetRowMinimumFriction",
+        "",
+
+        NewtonJoint.const.p.const("joint", ""),
+        float("friction", "")
+    )
+
+    void(
+        "UserJointSetRowMaximumFriction",
+        "",
+
+        NewtonJoint.const.p.const("joint", ""),
+        float("friction", "")
+    )
+
+    float(
+        "UserJointCalculateRowZeroAccelaration",
+        "",
+
+        NewtonJoint.const.p.const("joint", "")
+    )
+
+    float(
+        "UserJointGetRowAcceleration",
+        "",
+
+        NewtonJoint.const.p.const("joint", "")
+    )
+
+    void(
+        "UserJointSetRowAsInverseDynamics",
+        "",
+
+        NewtonJoint.const.p.const("joint", "")
+    )
+
+    void(
+        "UserJointSetRowAcceleration",
+        "",
+
+        NewtonJoint.const.p.const("joint", ""),
+        float("acceleration", "")
+    )
+
+    void(
+        "UserJointSetRowSpringDamperAcceleration",
+        "",
+
+        NewtonJoint.const.p.const("joint", ""),
+        float("rowStiffness", ""),
+        float("spring", ""),
+        float("damper", "")
+    )
+
+    void(
+        "UserJointSetRowStiffness",
+        "",
+
+        NewtonJoint.const.p.const("joint", ""),
+        float("stiffness", "")
+    )
+
+    int(
+        "UserJoinRowsCount",
+        "",
+
+        NewtonJoint.const.p.const("joint", "")
+    )
+
+    void(
+        "UserJointGetGeneralRow",
+        "",
+
+        NewtonJoint.const.p.const("joint", ""),
+        int("index", ""),
+        Check(6)..float.p.const("jacobian0", ""),
+        Check(6)..float.p.const("jacobian1", "")
+    )
+
+    float(
+        "UserJointGetRowForce",
+        "",
+
+        NewtonJoint.const.p.const("joint", ""),
+        int("row", "")
+    )
+
+    int(
+        "UserJointSubmitImmediateModeConstraint",
+        "",
+
+        NewtonJoint.const.p.const("joint", ""),
+        NewtonConstraintDescriptor.p.const("descriptor", ""),
+        float("timestep", "")
+    )
+
 //    NewtonMesh.p(
 //        "MeshCreate",
 //        "",
