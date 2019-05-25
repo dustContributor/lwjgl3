@@ -592,50 +592,50 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
 //        NewtonCollisionCopyConstructionCallback("constructor", ""),
 //        NewtonCollisionDestructorCallback("destructor", "")
 //    )
-//
-//    void(
-//        "WorldRayCast",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        float.const.p.const("p0", ""),
-//        float.const.p.const("p1", ""),
-//        NewtonWorldRayFilterCallback("filter", ""),
-//        void.p.const("userData", ""),
-//        NewtonWorldRayPrefilterCallback("prefilter", ""),
-//        int("threadIndex", "")
-//    )
-//
-//    int(
-//        "WorldConvexCast",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        float.const.p.const("matrix", ""),
-//        float.const.p.const("target", ""),
-//        NewtonCollision.const.p.const("shape", ""),
-//        float.p.const("param", ""),
-//        void.p.const("userData", ""),
-//        NewtonWorldRayPrefilterCallback("prefilter", ""),
-//        NewtonWorldConvexCastReturnInfo.p.const("info", ""),
-//        int("maxContactsCount", ""),
-//        int("threadIndex", "")
-//    )
-//
-//    int(
-//        "WorldCollide",
-//        "",
-//
-//        NewtonWorld.const.p.const("newtonWorld", ""),
-//        float.const.p.const("matrix", ""),
-//        NewtonCollision.const.p.const("shape", ""),
-//        void.p.const("userData", ""),
-//        NewtonWorldRayPrefilterCallback("prefilter", ""),
-//        NewtonWorldConvexCastReturnInfo.p.const("info", ""),
-//        int("maxContactsCount", ""),
-//        int("threadIndex", "")
-//    )
-//
+
+    void(
+        "WorldRayCast",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        Check(3)..float.const.p.const("p0", ""),
+        Check(3)..float.const.p.const("p1", ""),
+        NewtonWorldRayFilterCallback("filter", ""),
+        nullable..opaque_p.const("userData", ""),
+        NewtonWorldRayPrefilterCallback("prefilter", ""),
+        int("threadIndex", "")
+    )
+
+    int(
+        "WorldConvexCast",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        Check(16)..float.const.p.const("matrix", ""),
+        Check(3)..float.const.p.const("target", ""),
+        NewtonCollision.const.p.const("shape", ""),
+        Check(1)..float.p.const("param", "distance"),
+        nullable..opaque_p.const("userData", ""),
+        NewtonWorldRayPrefilterCallback("prefilter", ""),
+        nullable..NewtonWorldConvexCastReturnInfo.p.const("info", ""),
+        AutoSize("info")..int("maxContactsCount", ""),
+        int("threadIndex", "")
+    )
+
+    int(
+        "WorldCollide",
+        "",
+
+        NewtonWorld.const.p.const("newtonWorld", ""),
+        Check(16)..float.const.p.const("matrix", ""),
+        NewtonCollision.const.p.const("shape", ""),
+        nullable..opaque_p.const("userData", ""),
+        NewtonWorldRayPrefilterCallback("prefilter", ""),
+        nullable..NewtonWorldConvexCastReturnInfo.p.const("info", ""),
+        AutoSize("info")..int("maxContactsCount", ""),
+        int("threadIndex", "")
+    )
+
     int(
         "WorldGetBodyCount",
         "world utility functions",
@@ -1030,7 +1030,7 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
         NewtonWorld.const.p.const("newtonWorld", ""),
         float("radius", ""),
         int("shapeID", ""),
-        Check(16)..float.const.p.const("offsetMatrix", "")   // TODO Nullable
+        nullable..Check(16)..float.const.p.const("offsetMatrix", "")
     )
 
     NewtonCollision.p(
@@ -1042,7 +1042,7 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
         float("dy", ""),
         float("dz", ""),
         int("shapeID", ""),
-        Check(16)..float.const.p.const("offsetMatrix", "")
+        nullable..Check(16)..float.const.p.const("offsetMatrix", "")
     )
 
     NewtonCollision.p(
@@ -1053,7 +1053,7 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
         float("radius", ""),
         float("height", ""),
         int("shapeID", ""),
-        Check(16)..float.const.p.const("offsetMatrix", "")
+        nullable..Check(16)..float.const.p.const("offsetMatrix", "")
     )
 
     NewtonCollision.p(
@@ -1065,7 +1065,7 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
         float("radius1", ""),
         float("height", ""),
         int("shapeID", ""),
-        Check(16)..float.const.p.const("offsetMatrix", "")
+        nullable..Check(16)..float.const.p.const("offsetMatrix", "")
     )
 
     NewtonCollision.p(
@@ -1077,7 +1077,7 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
         float("radio1", ""),
         float("height", ""),
         int("shapeID", ""),
-        Check(16)..float.const.p.const("offsetMatrix", "")
+        nullable..Check(16)..float.const.p.const("offsetMatrix", "")
     )
 
     NewtonCollision.p(
@@ -1088,7 +1088,7 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
         float("radius", ""),
         float("height", ""),
         int("shapeID", ""),
-        Check(16)..float.const.p.const("offsetMatrix", "")
+        nullable..Check(16)..float.const.p.const("offsetMatrix", "")
     )
 
 //    NewtonCollision.p(
@@ -3373,7 +3373,7 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
         int("maxDOF", ""),
         NewtonUserBilateralCallback("callback", ""),
         NewtonBody.const.p.const("childBody", ""),
-        NewtonBody.const.p.const("parentBody", "")
+        nullable..NewtonBody.const.p.const("parentBody", "")
     )
 
     int(
@@ -3443,12 +3443,12 @@ val Newton = "Newton".nativeClass(Module.NEWTON, prefix = "NEWTON", prefixMethod
         float("friction", "")
     )
 
-    float(
-        "UserJointCalculateRowZeroAccelaration",
-        "",
-
-        NewtonJoint.const.p.const("joint", "")
-    )
+//    float(
+//        "UserJointCalculateRowZeroAccelaration",
+//        "",
+//
+//        NewtonJoint.const.p.const("joint", "")
+//    )
 
     float(
         "UserJointGetRowAcceleration",
